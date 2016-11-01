@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+	<title>Tablas</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-table.css">
+</head>
+<style>
+   .container {
+    background-image: url(img/fondofutbol.png.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 760px;
+  }
+  header{
+    color:#fff;
+  }
+
+  }
+    table, table td, table tr {
+  padding:0px;
+  border-spacing: 0px;
+}
+
+table {
+  border:1px black solid;
+  border-radius:5px;
+  min-width:400px;
+  font-family: Helvetica,Arial;
+}
+
+table td {
+  padding:6px;
+}
+
+table tr:first-child td:first-child {
+  border-radius:5px 0px 0px 0px;
+}
+
+table tr:first-child td:last-child {
+  border-radius:0px 5px 0px 0px;
+}
+
+table tr:last-child td:first-child {
+  border-radius:0px 0px 0px 5px;
+}
+
+table tr:last-child td:last-child {
+  border-radius:0px 0px 5px 0px;
+}
+
+table td:not(:last-child) {
+  border-right:1px #666 solid;
+}
+
+
+table tr:nth-child(2n) {
+  background: #87CEEB;
+}
+
+table tr:nth-child(2n+1){
+  background: #ADD8E6;
+}
+
+table.header tr:not(:first-child):hover, table:not(.header) tr:hover {
+  background:#E0FFFF;
+}
+
+table:not(.header) tr {
+  text-align: left;
+}
+
+table.header tr:first-child {
+  font-weight: bold;
+  color:#fff;
+  background-color: #444;
+  border-bottom:1px #000 solid;
+}
+
+table.header tr:nth-child(n+2) {
+  text-align: right;
+}
+
+</style>
+
+<body>
+
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <header>
+      <h1 class="page-header text-center">Tabla de seguimiento</h1>
+    </header>
+    <h2>Miguel Alfonso López Aristizabal</h2>
+   
+    <table id="table-transform" data-toggle="table" data-row-style="rowStyle" data-pagination="true" data-search="true">
+      <thead>
+
+        <tr>
+          <th>Seguimiento</th>
+          <th>Fecha inicio</th>
+          <th>Fecha fin</th>
+        <th></th>
+          
+        </tr>
+      </thead>
+      <tbody>
+                  
+            <tr>
+              <td>1</td>
+              <td>01-Febrero-2014</td>
+              <td>01-Abril-2014</td>
+                <td><a href="seguimie mala.html"><button>Ver</button></a></td>
+            </tr>
+
+               <tr>
+              <td>2</td>
+              <td>01-Junio-2014</td>
+              <td>01-Agosto-2014</td>
+              <td><button>Ver</button></td>
+           
+            </tr>
+           </tbody>
+</table>
+      </div>
+
+
+    </div>
+    <div class="row">
+  <div class="col-md-12">
+
+      <td><a href="tablas.html"><button>Volver</button></a></td> 
+  </div>
+</div>  
+  </div>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+</body>
+</html>

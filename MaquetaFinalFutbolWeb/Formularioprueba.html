@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registro Usuarios</title>
+        <link rel="shortcut icon" href="img/logo/logof.jpg" type="image/x-icon">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/formValidation.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/estiloforumilario.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/cards.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/validacion.js"></script> 
+    <script type="text/javascript" src="js/formValidation.js"></script>
+    <script src="js/formulario.js"></script>
+    <script type="text/javascript" src="js/bootstrapp.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+</head>
+<body>
+    <section id="formulario">
+        <div class="container">
+            <div class="row">
+                <section>
+                    <div class="wizard">
+                        <div class="wizard-inner">
+                            <div class="connecting-line"></div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Datos personales Jugador">
+                                        <span class="round-tab">
+                                            <i class="glyphicon glyphicon-user"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li role="presentation" class="disabled">
+                                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Datos del Acudientes">
+                                        <span class="round-tab">
+                                            <i class="fa fa-users"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li role="presentation" class="disabled">
+                                    <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Confirmacíon Registro">
+                                        <span class="round-tab">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <form role="form">
+                            <div class="tab-content">
+                                <div class="tab-pane active" role="tabpanel" id="step1">
+                                 <h2 class="branco">Datos Personales Jugador</h2>
+                                 <br>
+                                 <br>
+                                 <br>
+                                 <form id="form" method="post" class="form-horizontal" action="target.php">
+                                    <div class="form-group">
+                                        <div class="rowContainer">
+                                            <label id="branco"class="col-sm-2 control-label">Nombres</label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" name="firstName" placeholder="Ej: Juan Valdez" required="" />
+                                            </div>
+                                        </div>
+                                        <div class="rowContainer">
+                                            <label id="branco" class="col-sm-2 control-label">Apellidos </label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" name="lastName" placeholder="Ej: Gutierrez Saldaño" required="*" data-fv-row=".rowContainer" />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="rowContainer">
+                                            <label id="branco" class="col-sm-2 control-label">Documento Indentidad</label>
+                                            <div class="col-sm-4">
+                                                <input type="number" class="form-control" name="number" placeholder="Ej: 1015458915" required="*" />
+                                            </div>
+                                        </div>
+                                        <div class="rowContainer">
+                                            <label id="branco" class="col-sm-2 control-label">Fecha Nacimiento  </label>
+                                            <div class="col-sm-4">
+                                                <input type="date" class="form-control" name="lastName" placeholder="Gutierrez Saldaño" required="*" data-fv-row=".rowContainer" />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="rowContainer">
+                        <label id="branco" class="col-sm-2 control-label">E.P.S</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="number" placeholder="Ej: Sanitas" required="*" />
+                        </div>
+                    </div>
+
+                    <div class="rowContainer">
+                        <label id="branco" class="col-sm-2 control-label">R.H</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="lastName" placeholder="Ej: O+" required="*" data-fv-row=".rowContainer" />
+                        </div>
+                    </div>
+                                        <br>
+                                        <br>
+                                        <div class="rowContainer">
+                                         <label id="branco" class="col-sm-2 control-label">Correo Electrónico</label>
+                                         <div class="col-sm-5">
+                                            <input type="email" class="form-control" name="email" placeholder="Ej: alguien@hotmail.com" required="*" />
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="rowContainer">
+                                        <label id="branco" class="col-sm-1 control-label">Telefono</label>
+                                        <div class="col-sm-4">
+                                            <input type="number" class="form-control" name="number" placeholder="Ej: 320568974" required="*" />
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="rowContainer">
+                                     <label id="branco" class="col-sm-2 control-label">Contraseña</label>
+                                     <div class="col-sm-5">
+                                        <input type="password" class="form-control" name="email" placeholder="Ej: *************" required="*" />
+                                    </div>
+                                </div>
+                                <div class="rowContainer">
+                                    <label id="branco" class="col-sm-1 control-label">Confirmar Contraseña</label>
+                                    <div class="col-sm-4">
+                                        <input type="password" class="form-control" name="number" placeholder="Ej: ************" required="*" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <ul class="list-inline pull-left">
+
+                            <a href="index.html" class="btn btn-outline btn-success"><span class="fa fa-home"></span> Inicio Pagina </a></li>
+                        </ul>
+                        <ul class="list-inline pull-right">
+                         <button type="submit" class="btn btn-">Validar datos</button>
+                         <li><button type="button" class="btn btn-danger  next-step">Guardar y continuar</button></li>
+                     </ul>
+                 </div>
+                 <div class="tab-pane" role="tabpanel" id="step2">
+                    <h2 class="branco">Datos Acudientes</h2>
+                    <div class="form-group">
+                       <br>
+                       <br>
+                       <br>
+                       <div class="rowContainer">
+                        <label id="branco"class="col-sm-2 control-label">Nombre Acudiente</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="firstName" placeholder="Ej: Juan Valdez" required="" />
+                        </div>
+                    </div>
+                    <div class="rowContainer">
+                        <label id="branco" class="col-sm-2 control-label">Apellidos Acudiente </label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="lastName" placeholder="Ej: Gutierrez Saldaño" required="*" data-fv-row=".rowContainer" />
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="rowContainer">
+                        <label id="branco" class="col-sm-2 control-label">Documento Indentidad</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" name="number" placeholder="Ej: 1015458915" required="*" />
+                        </div>
+                    </div>
+                    <div class="rowContainer">
+                        <label id="branco" class="col-sm-2 control-label">Fecha Nacimiento  </label>
+                        <div class="col-sm-4">
+                            <input type="date" class="form-control" name="lastName" placeholder="Gutierrez Saldaño" required="*" data-fv-row=".rowContainer" />
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="rowContainer">
+                        <label id="branco" class="col-sm-2 control-label">E.P.S</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="number" placeholder="Ej: Sanitas" required="*" />
+                        </div>
+                    </div>
+
+                    <div class="rowContainer">
+                        <label id="branco" class="col-sm-2 control-label">R.H</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="lastName" placeholder="Ej: O+" required="*" data-fv-row=".rowContainer" />
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="rowContainer">
+                     <label id="branco" class="col-sm-2 control-label">Correo Electrónico</label>
+                     <div class="col-sm-5">
+                        <input type="email" class="form-control" name="email" placeholder="Ej: alguien@hotmail.com" required="*" />
+                    </div>
+                </div>
+                <div class="rowContainer">
+                    <label id="branco" class="col-sm-1 control-label">Telefono</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" name="number" placeholder="Ej: 320568974" required="*" />
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <ul class="list-inline pull-left">
+                <a href="index.html" class="btn btn-outline btn-info"><span class="fa fa-home"></span>Inicio Pagina</a></li>
+                <button type="button" class="btn btn-warning prev-step"> <span class="fa fa-reply"></span> Regresar</button>
+            </ul>
+            <ul class="list-inline pull-right">
+                <button type="submit" class="btn btn-danger">Validar datos</button>
+                <button name="button3"  class="btn btn-success next-step" type="button" onclick='swal("Registro de datos completo.", "Felicitaciones, ahora usted es parte del sistema y podrá iniciar sesión dentro de poco tiempo.", "success")' value="Alerta de confirmación">Registrar usuario</button>
+            </ul>
+        </div>
+        <div class="tab-pane" role="tabpanel" id="complete">
+       <center>
+           <img src="img/todad/Registro2.png" width="100%" height="100%">
+            <a href="index.html" class="btn btn-outline btn-danger"><span class="fa fa-home"></span>Inicio Pagina</a></li>
+
+       </center>
+<div class="clearfix"></div>
+</div>
+</form>
+</div>
+</section>
+</div>
+</div>
+</section>
+</body>
+</html>

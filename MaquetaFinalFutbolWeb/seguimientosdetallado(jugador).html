@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Seguimiento detallado Jugador</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/buscarpaginausuarios.css">
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/amcharts.js" type="text/javascript"></script>
+  <script src="js/serial.js" type="text/javascript"></script>
+  <script src="js/modernizr-2.6.2.min.js"></script>
+  <script src="js/usuario/jquery.easing.1.3.js"></script>
+  <script src="js/usuario/main.js"></script>
+  <style type="text/css">
+
+    .amcharts-graph-g1 .amcharts-graph-stroke {
+      stroke-dasharray: 3px 3px;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      -webkit-animation: am-moving-dashes 1s linear infinite;
+      animation: am-moving-dashes 1s linear infinite;
+    }
+
+    @-webkit-keyframes am-moving-dashes {
+      100% {
+        stroke-dashoffset: -30px;
+      }
+    }
+    @keyframes am-moving-dashes {
+      100% {
+        stroke-dashoffset: -30px;
+      }
+    }
+
+
+    .lastBullet {
+      -webkit-animation: am-pulsating 1s ease-out infinite;
+      animation: am-pulsating 1s ease-out infinite;
+    }
+    @-webkit-keyframes am-pulsating {
+      0% {
+        stroke-opacity: 1;
+        stroke-width: 0px;
+      }
+      100% {
+        stroke-opacity: 0;
+        stroke-width: 50px;
+      }
+    }
+    @keyframes am-pulsating {
+      0% {
+        stroke-opacity: 1;
+        stroke-width: 0px;
+      }
+      100% {
+        stroke-opacity: 0;
+        stroke-width: 50px;
+      }
+    }
+
+    .amcharts-graph-column-front {
+      -webkit-transition: all .3s .3s ease-out;
+      transition: all .3s .3s ease-out;
+    }
+    .amcharts-graph-column-front:hover {
+      fill: #496375;
+      stroke: #496375;
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out;
+    }
+
+
+    .amcharts-graph-g2 {
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      stroke-dasharray: 500%;
+      stroke-dasharray: 0 \0/;    /* fixes IE prob */
+      stroke-dashoffset: 0 \0/;   /* fixes IE prob */
+      -webkit-animation: am-draw 40s;
+      animation: am-draw 40s;
+    }
+    @-webkit-keyframes am-draw {
+      0% {
+        stroke-dashoffset: 500%;
+      }
+      100% {
+        stroke-dashoffset: 0px;
+      }
+    }
+    @keyframes am-draw {
+      0% {
+        stroke-dashoffset: 500%;
+      }
+      100% {
+        stroke-dashoffset: 0px;
+      }
+    }
+
+
+
+
+  </style>
+  <script>
+            // note, we have townName field with a name specified for each datapoint and townName2 with only some of the names specified.
+            // we use townName2 to display town names next to the bullet. And as these names would overlap if displayed next to each bullet,
+            // we created this townName2 field and set only some of the names for this purpse.
+            var chartData = [
+            {
+              "date": "2016-01-02",
+              "distance": 88,
+              "townName": "Físico",
+              "townName2": "Físico",
+              "townSize": 25,
+              "latitude": 88,
+              "duration": 81
+            },
+
+
+            {
+              "date": "2016-01-04",
+              "distance": 99,
+              "townName": "Táctico",
+              "townName2": "Táctico",
+              "townSize": 25,
+              "latitude": 100,
+              "duration": 82
+            },
+
+            {
+              "date": "2016-01-06",
+              "distance": 60,
+              "townName": "Tecnico",
+              "townName2": "Técnico",
+              "townSize": 25,
+              "latitude": 60,
+              "duration": 78
+            },
+
+            {
+              "date": "2016-01-08",
+              "distance": 90,
+              "townName": "Psicológico",
+              "townName2": "Psicológico",
+              "townSize": 25,
+              "latitude": 90,
+              "duration": 80
+            },
+
+
+            {
+              "date": "2016-01-09",
+
+
+            },
+
+
+            ];
+            var chart;
+
+            AmCharts.ready(function () {
+                // SERIAL CHART
+                chart = new AmCharts.AmSerialChart();
+                chart.addClassNames = true;
+                chart.dataProvider = chartData;
+                chart.categoryField = "date";
+                chart.dataDateFormat = "YYYY-MM-DD";
+                chart.startDuration = 1;
+                chart.color = "#FFFFFF";
+                chart.marginLeft = 0;
+
+                // AXES
+                // category
+                var categoryAxis = chart.categoryAxis;
+                categoryAxis.parseDates = true; // as our data is date-based, we set parseDates to true
+                categoryAxis.minPeriod = "DD"; // our data is daily, so we set minPeriod to DD
+                categoryAxis.autoGridCount = false;
+                categoryAxis.gridCount = 50;
+                categoryAxis.gridAlpha = 0.1;
+                categoryAxis.gridColor = "#FFFFFF";
+                categoryAxis.axisColor = "#555555";
+                // we want custom date formatting, so we change it in next line
+                categoryAxis.dateFormats = [{
+                  period: 'DD',
+                  format: 'DD'
+                }, {
+                  period: 'WW',
+                  format: 'MMM DD'
+                }, {
+                  period: 'MM',
+                  format: 'MMM'
+                }, {
+                  period: 'YYYY',
+                  format: 'YYYY'
+                }];
+
+                // as we have data of different units, we create three different value axes
+                // Distance value axis
+                var distanceAxis = new AmCharts.ValueAxis();
+                distanceAxis.title = "Nota Del Jugador";
+                distanceAxis.gridAlpha = 0;
+                distanceAxis.axisAlpha = 0;
+                chart.addValueAxis(distanceAxis);
+
+                // latitude value axis
+                var latitudeAxis = new AmCharts.ValueAxis();
+                latitudeAxis.gridAlpha = 0;
+                latitudeAxis.axisAlpha = 0;
+                latitudeAxis.title = "Duracion por posicionPartido 03";
+                latitudeAxis.offset = 83;
+                latitudeAxis.titleOffset = 10;
+                latitudeAxis.position = "right";
+                chart.addValueAxis(latitudeAxis);
+
+                // duration value axis
+                var durationAxis = new AmCharts.ValueAxis();
+                // the following line makes this value axis to convert values to duration
+                // it tells the axis what duration unit it should use. mm - minute, hh - hour...
+                durationAxis.duration = "mm";
+                durationAxis.durationUnits = {
+                  DD: "d. ",
+                  hh: "h ",
+                  mm: "min",
+                  ss: ""
+                };
+                durationAxis.gridAlpha = 0;
+                durationAxis.axisAlpha = 0;
+                durationAxis.inside = false;
+                durationAxis.position = "right";
+                chart.addValueAxis(durationAxis);
+
+                // GRAPHS
+                // distance graph
+                var distanceGraph = new AmCharts.AmGraph();
+                distanceGraph.valueField = "distance";
+                distanceGraph.title = "Puntaje";
+                distanceGraph.type = "column";
+                distanceGraph.fillAlphas = 0.9;
+                distanceGraph.valueAxis = distanceAxis; // indicate which axis should be used
+                distanceGraph.balloonText = "[[value]] Puntos";
+                distanceGraph.legendValueText = "[[value]] mi";
+                distanceGraph.legendPeriodValueText = "total: [[value.sum]] mi";
+                distanceGraph.lineColor = "#263138";
+                distanceGraph.alphaField = "alpha";
+                chart.addGraph(distanceGraph);
+
+                // latitude graph
+                var latitudeGraph = new AmCharts.AmGraph();
+                latitudeGraph.valueField = "latitude";
+                latitudeGraph.id = "g1";
+                latitudeGraph.classNameField = "bulletClass";
+                latitudeGraph.title = "Posicion del Jugador";
+                latitudeGraph.type = "line";
+                latitudeGraph.valueAxis = latitudeAxis; // indicate which axis should be used
+                latitudeGraph.lineColor = "#786c56";
+                latitudeGraph.lineThickness = 1;
+                latitudeGraph.legendValueText = "[[description]]/[[value]]";
+                latitudeGraph.descriptionField = "townName";
+                latitudeGraph.bullet = "round";
+                latitudeGraph.bulletSizeField = "townSize"; // indicate which field should be used for bullet size
+                latitudeGraph.bulletBorderColor = "#786c56";
+                latitudeGraph.bulletBorderAlpha = 1;
+                latitudeGraph.bulletBorderThickness = 2;
+                latitudeGraph.bulletColor = "#000000";
+                latitudeGraph.labelText = "[[townName2]]"; // not all data points has townName2 specified, that's why labels are displayed only near some of the bullets.
+                latitudeGraph.labelPosition = "right";
+                latitudeGraph.balloonText = "Puntaje:[[value]]";
+                latitudeGraph.showBalloon = true;
+                latitudeGraph.animationPlayed = true;
+                chart.addGraph(latitudeGraph);
+
+                // duration graph
+                var durationGraph = new AmCharts.AmGraph();
+                durationGraph.id = "g2";
+                durationGraph.title = "Duracion Jugador Partido 03";
+                durationGraph.valueField = "duration";
+                durationGraph.type = "line";
+                durationGraph.valueAxis = durationAxis; // indicate which axis should be used
+                durationGraph.lineColor = "#ff5755";
+                durationGraph.balloonText = "[[value]]";
+                durationGraph.lineThickness = 1;
+                durationGraph.legendValueText = "[[value]]";
+                durationGraph.bullet = "square";
+                durationGraph.bulletBorderColor = "#ff5755";
+                durationGraph.bulletBorderThickness = 1;
+                durationGraph.bulletBorderAlpha = 1;
+                durationGraph.dashLengthField = "dashLength";
+                durationGraph.animationPlayed = true;
+                chart.addGraph(durationGraph);
+
+                // CURSOR
+                var chartCursor = new AmCharts.ChartCursor();
+                chartCursor.zoomable = false;
+                chartCursor.categoryBalloonDateFormat = undefined;
+                chartCursor.cursorAlpha = 0;
+                chartCursor.valueBalloonsEnabled = false;
+                chartCursor.valueLineBalloonEnabled = true;
+                chartCursor.valueLineEnabled = true;
+                chartCursor.valueLineAlpha = 0.5;
+                chart.addChartCursor(chartCursor);
+
+                // LEGEND
+                var legend = new AmCharts.AmLegend();
+                legend.bulletType = "round";
+                legend.equalWidths = false;
+                legend.valueWidth = 120;
+                legend.useGraphSettings = true;
+                legend.color = "#FFFFFF";
+                chart.addLegend(legend);
+
+                // WRITE
+                chart.write("chartdiv");
+              });
+            </script>
+          </head>
+
+          <body  style="background-color:#161616">
+
+            <div id="wrapper">
+              <!-- Sidebar -->
+             <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">  
+      <br>
+      <center>  <img alt="User Pic" src="img/usuarios/Avatar anonimo.png" class="img-circle img-responsive" style="height: 80px;"></center>
+      <li class="sidebar-brand">
+       <a href="MenuUsuarioJugador.html">
+        <em class="fa fa-user"></em>&nbsp;Usuario Jugador:
+      </a>
+    </li>
+    <ul>
+      <input type="text" id="buscador" placeholder="Buscar">
+    </ul>
+    <br>
+    <li>
+    </li>
+    <li>
+      <a href="ConsultarListaentrenadores(Jugadores).html"><em class="fa fa-users"></em>&nbsp;Consultar Lista entrenadores</a>
+    </li>
+     <li>
+    <a href="actividades(Jugador).html"><em class="fa fa-check-square-o"></em>&nbsp;Actividades del Jugador</a>
+    </li>
+    <li>
+      <a href="#"><em class="fa fa-bar-chart"></em>&nbsp;Seguimiento general Jugador</a>
+    </li>
+    <li>
+      <a href="seguimiento01(jugador).html"><em class="fa fa-pie-chart"></em>&nbsp;Seguimiento personal jugador</a>
+    </li>
+    <li>
+      <a href="Torneos(Jugador).html"><em class="fa fa-calendar"></em>&nbsp; Torneos</a>
+    </li>
+    <li>
+      <a href="ConsultarhorariosJugador.html"><em class="fa fa-calendar-check-o"></em>&nbsp; Horarios</a>
+    </li>
+    <li>
+      <a href="Uniformes(JUGADOR).html"><em class="fa fa-shopping-cart"></em>&nbsp; Uniformes</a>
+    </li>
+    <li>
+      <a href="index.html"><em class="fa fa-power-off"></em>&nbsp;Cerrar sesión </a>
+    </li>
+  </ul>
+</div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-12">
+                   <p><a href="#menu-toggle" class="btn btn-outline  btn-danger" id="menu-toggle">Cerrar/Mostrar</a></p>
+                   <div class="container">
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+
+
+
+
+                     <div id="chartdiv" style="width:100%; height:600px;"></div>
+
+
+
+
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <!-- /#page-content-wrapper -->
+
+           </div>
+
+
+
+
+
+           <script>
+            $("#menu-toggle").click(function(e) {
+              e.preventDefault();
+              $("#wrapper").toggleClass("toggled");
+            });
+          </script>
+
+        </body>
+
+        </html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <title>Pagos Acudiente</title>
+  <link rel="shortcut icon" href="img/logo/logof.jpg" type="image/x-icon">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+  <link rel="stylesheet" href="css/buscarpaginausuarios.css">
+  <link rel="stylesheet" href="css/factura.css">
+  <link rel="stylesheet" href="pagoAcudientes.css">
+  <link rel="stylesheet" href="css/bloquear.css">
+  <script src="js/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+
+    <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">  
+      <br>
+      <center>  <img alt="User Pic" src="img/usuarios/Avatar anonimo.png" class="img-circle img-responsive" style="height: 80px;"></center>
+      <li class="sidebar-brand">
+       <a href="MenuUsuarioAcudiente2.html">
+        <em class="fa fa-user"></em>&nbsp;Usuario Acudiente:
+      </a>
+    </li>
+    <ul>
+      <input type="text" id="buscador" placeholder="Buscar">
+    </ul>
+    <br>
+    <li>
+    </li>
+    <li>
+      <a href="ConsultarListaEntrenadores(acudiente).html"><em class="fa fa-user"></em>&nbsp;Consultar Lista entrenadores</a>
+    </li>
+    <li>
+      <a href="#"><em class="fa fa-dollar"></em>&nbsp;Control de pagos</a>
+    </li>
+    <li>
+      <a href="seguimiento01(Acudiente).html"><em class="fa fa-futbol-o"></em>&nbsp;Seguimiento del jugador</a>
+    </li>
+    <li>
+      <a href="ConsultarhorariosAcudiente.html"><em class="fa fa-calendar-check-o"></em>&nbsp; Horarios</a>
+    </li>
+    <li>
+      <a href="Torneos(Acudiente).html"><em class="fa fa-calendar"></em>&nbsp; Torneos</a>
+    </li>
+    <li>
+      <a href="Uniformes(acudiente).html"><em class="fa fa-shopping-cart"></em>&nbsp; Uniformes</a>
+    </li>
+    <li>
+    </li>
+    <li>
+      <a href="index.html"><em class="fa fa-power-off"></em>&nbsp;Cerrar sesión </a>
+    </li>
+  </ul>
+</div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+         <p><a href="#menu-toggle" class="btn btn-outline  btn-danger" id="menu-toggle">Cerrar/Mostrar</a></p>
+         <div class="container">
+
+           <header>
+            <h1 class="page-header text-center">Control de Pagos</h1>
+          </header>
+          <h2>Pagos de los Acudientes</h2>
+          <p>Todos los usuarios "Acudientes" que  hasta el momento pagaron en el sistema.</p>
+          <table id="table-transform" data-toggle="table" data-short-name="fechaRegistro" data-short-order="desc" data-show-toogle="true" data-show-columns="true" data-side-pagination="client" data-page-list="[5, 10, 20, 50, 100, 200]" data-row-style="rowStyle" data-pagination="true" data-search="true" >
+            <thead>
+              <tr>
+                <th><center><em class="fa fa-cog"></em></center></th>
+                <th class="hidden-xs">ID Factura</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+              </tr> 
+            </thead>
+            <tbody>
+              <tr>
+                <td align="center">
+
+                  <center>  <a class="btn btn-default" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1"  ><em class="fa fa-eye" ></em></a></center>
+                </td>
+                <td>00220190</td>
+                <td>Miguel Ángel </td>
+                <td>Barrera Andrade<td>
+                  <td>12-10-2016</td>
+                  <td class="danger">Pendiente</td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <center>  <a class="btn btn-default" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#factura2"  ><em class="fa fa-eye" ></em></a></center>
+                  </td>
+                  <td>00220022</td>
+                  <td>Miguel Ángel </td>
+                  <td>Barrera Andrade<td>
+                    <td>12-09-2016</td>
+                    <td class="success">Pagado</td>
+
+                  </tr>
+
+                  <tr>
+                    <td align="center">
+
+                      <center>  <a class="btn btn-default" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#factura1"  ><em class="fa fa-eye" ></em></a></center>
+                    </td>
+                    <td>00219964</td>
+                    <td>Miguel Ángel </td>
+                    <td>Barrera Andrade<td>
+                      <td>12-08-2016</td>
+                      <td class="success">Pagado</td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="ControlPagos.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+    <script src="js/usuario/jquery.easing.1.3.js"></script>
+    <script src="js/usuario/main.js"></script>
+    <script>
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+    <center>
+      <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+           <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Factura</h4>
+          </div>
+
+          <div class="modal-body">
+            <br>
+            <div class=" col-xs-11 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+            </div>
+            <div class="row">
+              <div class="text-center">
+                <h1>Recibo de pagos:</h1>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <address>
+                    <strong>Club Deportivo Expreso Rojo</strong>
+                    <br>
+                    <br>
+                    <strong>Acudiente:</strong>  Miguel Ángel Barrera Andrade 
+                    <br>
+                    <br>
+                    <strong>Ciudad:</strong> Bogotà
+                    <br><br>
+                    <abbr title="Phone"><strong>Telefono:</strong></abbr> 3202930442
+                  </address>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                  <p>
+                    <em><strong>Nº Factura:</strong>00220190</em>
+                  </p>
+                  <p>
+                    <em><strong>Fecha:</strong> 12, Octubre, 2016</em>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Lo que usted pago es:</th>
+                  <th>Cantidad</th>
+                  <th class="text-center">Valor</th>
+                  <th class="text-center">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td class="col-md-9"><em>Mensualidad</em></h4></td>
+                  <td class="col-md-1" style="text-align: center"> 1 </td>
+                  <td class="col-md-1 text-center">$85.500</td>
+                  <td class="col-md-1 text-center">$85.500</td>
+                </tr>
+
+                <tr>
+
+                  <td class="text-right">
+                    <p>
+                      <strong>Subtotal: </strong>
+                    </p>
+                    <p>
+                      <strong>iva: </strong>
+                    </p></td>
+                    <td class="text-center">
+                      <p>
+                        <strong>85500</strong>
+                      </p>
+                      <p>
+                        <strong>$3.345</strong>
+                      </p></td>
+                    </tr>
+                    <tr>
+                      <td>   </td>
+                      <td>   </td>
+                      <td class="text-right"><h4><strong>Total: </strong></h4></td>
+                      <td class="text-center text-danger"><h4><strong>$88.845</strong></h4></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <button name="button3" type="button" onclick='swal("Recibo Guardado!", "Presione el boton ok!", "success")' value="Alerta de confirmación"type="button" class="btn btn-success btn-lg btn-block">
+                  Guardar Recibo &nbsp;<span class="glyphicon glyphicon-ok"></span>
+                </button></td>
+              </div>
+              <div class="modal-footer">
+
+                <center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="factura2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Factura</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="text-center">
+                  <h1>Recibo de pagos:</h1>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                   <address>
+                    <strong>Club Deportivo Expreso Rojo</strong>
+                    <br>
+                    <br>
+                    <strong>Acudiente:</strong>  Miguel Ángel Barrera Andrade 
+                    <br>
+                    <br>
+                    <strong>Ciudad:</strong> Bogotà
+                    <br><br>
+                    <abbr title="Phone"><strong>Telefono:</strong></abbr> 3202930442
+                  </address>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                  <p>
+                    <em><strong>Nº Factura:</strong>00220022</em>
+                  </p>
+                  <p>
+                    <em><strong>Fecha:</strong> 12, Septiembre, 2016</em>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Lo que usted pago es:</th>
+                  <th>Cantidad</th>
+                  <th class="text-center">Valor</th>
+                  <th class="text-center">Total</th>
+                </tr>
+              </thead>
+
+              <tr>
+                <td class="col-md-9"><em>Mensualidad</em></h4></td>
+                <td class="col-md-1" style="text-align: center"> 1 </td>
+                <td class="col-md-1 text-center">$85.500</td>
+                <td class="col-md-1 text-center">$85.500</td>
+              </tr>
+
+              <tr>
+
+                <td class="text-right">
+                  <p>
+                    <strong>Subtotal: </strong>
+                  </p>
+                  <p>
+                    <strong>iva: </strong>
+                  </p></td>
+                  <td class="text-center">
+                    <p>
+                      <strong>85500</strong>
+                    </p>
+                    <p>
+                      <strong>$3.345</strong>
+                    </p></td>
+                  </tr>
+                  <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td class="text-right"><h4><strong>Total: </strong></h4></td>
+                    <td class="text-center text-danger"><h4><strong>$88.845</strong></h4></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <button name="button3" type="button" onclick='swal("Recibo Guardado!", "Presione el boton ok!", "success")' value="Alerta de confirmación"type="button" class="btn btn-success btn-lg btn-block">
+                Guardar Recibo &nbsp;<span class="glyphicon glyphicon-ok"></span>
+              </button>
+            </td>
+          </div>
+          <div class="modal-footer">
+
+            <center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="factura1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Factura</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="text-center">
+              <h1>Recibo de pagos:</h1>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+
+                <address>
+                  <strong>Club Deportivo Expreso Rojo</strong>
+                  <br>
+
+                  <br>
+                  <strong>Acudiente:</strong>  Miguel Ángel Barrera Andrade 
+                  <br>
+                  <br>
+                  <strong>Ciudad:</strong> Bogotà
+                  <br><br>
+                  <abbr title="Phone"><strong>Telefono:</strong></abbr> 3202930442
+                </address>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                <p>
+                  <em><strong>Nº Factura:</strong>00219964</em>
+                </p>
+                <p>
+                  <em><strong>Fecha:</strong> 12, Agosto, 2016</em>
+                </p>
+              </div>
+            </div>
+          </div>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Lo que usted pago es:</th>
+                <th>Cantidad</th>
+                <th class="text-center">Valor</th>
+                <th class="text-center">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-9"><em>Uniforme Completo</em></h4></td>
+                <td class="col-md-1" style="text-align: center"> 1 </td>
+                <td class="col-md-1 text-center">$156.760</td>
+                <td class="col-md-1 text-center">$156.760</td>
+              </tr>
+              <tr>
+                <td class="col-md-9"><em>Matricula</em></h4></td>
+                <td class="col-md-1" style="text-align: center"> 1 </td>
+                <td class="col-md-1 text-center">$180.000</td>
+                <td class="col-md-1 text-center">$180.000</td>
+              </tr>
+              <tr>
+                <td class="col-md-9"><em>Mensualidad</em></h4></td>
+                <td class="col-md-1" style="text-align: center"> 3 </td>
+                <td class="col-md-1 text-center">$85.500</td>
+                <td class="col-md-1 text-center">$256.500</td>
+              </tr>
+
+              <tr>
+
+                <td class="text-right">
+                  <p>
+                    <strong>Subtotal: </strong>
+                  </p>
+                  <p>
+                    <strong>iva: </strong>
+                  </p></td>
+                  <td class="text-center">
+                    <p>
+                      <strong>593.260</strong>
+                    </p>
+                    <p>
+                      <strong>$3.345</strong>
+                    </p></td>
+                  </tr>
+                  <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td class="text-right"><h4><strong>Total: </strong></h4></td>
+                    <td class="text-center text-danger"><h4><strong>$596.605</strong></h4></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <button name="button3" type="button" onclick='swal("Recibo Guardado!", "Presione el boton ok!", "success")' value="Alerta de confirmación"type="button" class="btn btn-success btn-lg btn-block">
+                Guardar Recibo &nbsp;<span class="glyphicon glyphicon-ok"></span>
+              </button></td>
+            </div>
+            <div class="modal-footer">
+
+              <center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Publicar Horario</title>
+      <link rel="shortcut icon" href="img/logo/logof.jpg" type="image/x-icon">
+
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-table.css">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/buscarpaginausuarios.css">
+   <link rel="stylesheet" href="css/font-awesome.css">
+   <link rel="stylesheet" href="css/sweetalert.css">
+   <link rel="stylesheet" href="css/cards.css">
+  <script src="js/modernizr-2.6.2.min.js"></script>
+
+
+</head>
+<style>
+  .material-button-anim {
+  position: relative;
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+.material-button {
+    position: relative;
+    top: 0;
+    z-index: 1;
+    width: 33px;  
+    height: 33px;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #fb8c00 ;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(255,255,255,.3);
+    outline: none;
+}
+.material-button-toggle {
+    z-index: 3;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto;
+}
+.material-button-toggle span {
+    -webkit-transform: none;
+    transform:         none;
+    -webkit-transition: -webkit-transform .175s cubic-bazier(.175,.67,.83,.67);
+    transition:         transform .175s cubic-bazier(.175,.67,.83,.67);
+}
+.material-button-toggle.open {
+    -webkit-transform: scale(1.3,1.3);
+    transform:         scale(1.3,1.3);
+    -webkit-animation: toggleBtnAnim .175s;
+    animation:         toggleBtnAnim .175s;
+}
+.material-button-toggle.open span {
+    -webkit-transform: rotate(45deg);
+    transform:         rotate(45deg);
+    -webkit-transition: -webkit-transform .175s cubic-bazier(.175,.67,.83,.67);
+    transition:         transform .175s cubic-bazier(.175,.67,.83,.67);
+}
+
+#options {
+  
+}
+.option {
+    position: relative;
+}
+
+.option .option2,
+.option .option3 {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -webkit-transition: all .175s;
+    transition:         all .175s;
+}
+
+.option .option2 {
+    -webkit-transform: translate3d(0,51px,0) scale(.8,.8);
+    transform:         translate3d(0,51px,0) scale(.8,.8);
+}
+.option .option3 {
+    -webkit-transform: translate3d(-40px,51px,0) scale(.8,.8);
+    transform:         translate3d(-40px,51px,0) scale(.8,.8);
+}
+
+.option.scale-on .option2,
+.option.scale-on .option3 {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    -webkit-transform: none;
+    transform:         none;
+    -webkit-transition: all .175s;
+    transition:         all .175s;
+}
+.option.scale-on .option2 {
+    -webkit-transform: translateY(-28px) translateZ(0);
+    transform:         translateY(-28px) translateZ(0);
+    -webkit-transition: all .175s;
+    transition:         all .175s;
+}
+
+@keyframes toggleBtnAnim {
+    0% {
+        -webkit-transform: scale(1,1);
+        transform:         scale(1,1);
+    }
+    25% {
+        -webkit-transform: scale(1.4,1.4);
+        transform:         scale(1.4,1.4); 
+    }
+    75% {
+        -webkit-transform: scale(1.2,1.2);
+        transform:         scale(1.2,1.2);
+    }
+    100% {
+        -webkit-transform: scale(1.3,1.3);
+        transform:         scale(1.3,1.3);
+    }
+}
+@-webkit-keyframes toggleBtnAnim {
+    0% {
+        -webkit-transform: scale(1,1);
+        transform:         scale(1,1);
+    }
+    25% {
+        -webkit-transform: scale(1.4,1.4);
+        transform:         scale(1.4,1.4); 
+    }
+    75% {
+        -webkit-transform: scale(1.2,1.2);
+        transform:         scale(1.2,1.2);
+    }
+    100% {
+        -webkit-transform: scale(1.3,1.3);
+        transform:         scale(1.3,1.3);
+    }
+}
+</style>
+
+
+<body>
+
+  <div id="wrapper">
+<!-- Sidebar -->
+ <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">  
+      <br>
+      <center>  <img alt="User Pic" src="img/usuarios/Avatar anonimo.png" class="img-circle img-responsive" style="height: 80px;"></center>
+      <li class="sidebar-brand">
+       <a href="MenuUsuarioCoordiador.html">
+        <em class="fa fa-user"></em>&nbsp;Usuario Coordinador:
+      </a>
+    </li>
+    <ul>
+      <input type="text" id="buscador" placeholder="Buscar">
+    </ul>
+    <br>
+    <li>
+    </li>
+    <li>
+      <a href="ConsultarListaEntrenadores.html"><em class="fa fa-user-secret"></em>&nbsp;Consultar Lista entrenadores</a>
+    </li>
+    <li>
+      <a href="ConsultarListaJugadores.html"><em class="fa fa-users"></em>&nbsp;Consultar Lista Jugadores</a>
+    </li>
+    <li>
+      <a href="ConsultarListaAcudiente.html"><em class="fa fa-user"></em>&nbsp;Consultar Lista Acudientes</a>
+    </li>
+    <li>
+      <a href="ControlPago.html"><em class="fa fa-dollar"></em>&nbsp;Control de pagos</a>
+    </li>
+    <li>
+      <a href="validarusuarios.html"><em class="fa fa-street-view"></em>&nbsp;Validación de usuarios</a>
+    </li>
+    <li>
+      <a href="#"><em class="fa fa-calendar-check-o"></em>&nbsp;Publicar Horarios</a>
+    </li>
+    <li>
+      <a href="Torneos(Coordinador).html"><em class="fa fa-calendar-plus-o"></em>&nbsp;Publicar Torneos</a>
+    </li>
+    <li>
+    </li>
+    <li>
+      <a href="index.html"><em class="fa fa-power-off"></em>&nbsp;Cerrar sesión </a>
+    </li>
+  </ul>
+</div>
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+    <div class="fh5co-features-style-1" style=" background-size: 100%; background-image: url(img/todad/tumblr_n4t7kiNwFQ1rq7z94o1_250.gif);">
+  
+         <div class="fh5co-overlay"></div>
+         <div class="container" style="z-index: 3; position: relative;">
+            <div class="row p-b">
+               <div class="col-md-6 col-md-offset-3 text-center">
+               
+
+ <p><a href="#menu-toggle" class="btn btn-outline  btn-danger" id="menu-toggle">Cerrar/Mostrar</a></p>
+                  <h2 class="fh5co-heading">Horarios</h2>
+               </div>
+            </div>
+            <div class="row">
+               <div class="fh5co-features">
+                  <div class="fh5co-feature">
+                     <div class="icon"><i class="icon-ribbon"></i></div>
+                     <h3>Lunes</h3>
+                     <br>
+                     <br>
+                     
+                    
+                            <div class="material-button-anim">
+          <ul class="list-inline" id="options">
+            <li class="option">
+              
+            </li>
+            <li class="option">
+              <button class="material-button option2" type="button">
+                <span class="fa fa-pencil" aria-hidden="true"></span>
+              </button>
+            </li>
+            <li class="option">
+              <button class="material-button option3" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <span class="fa fa-file-text-o" aria-hidden="true"></span>
+              </button>
+            </li>
+          </ul>
+          <button class="material-button material-button-toggle" type="button">
+            <span class="fa fa-plus" aria-hidden="true"></span>
+          </button>
+        </div>
+                  </div>
+                  <div class="fh5co-feature">
+                     <div class="icon"><i class="icon-ribbon"></i></div>
+                     <h3>Martes</h3>
+                           <br>
+                     <br>
+                     
+                    
+                            <div class="material-button-anim">
+          <ul class="list-inline" id="options">
+            <li class="option">
+              
+            </li>
+            <li class="option">
+              <button class="material-button option2" type="button">
+                <span class="fa fa-pencil" aria-hidden="true"></span>
+              </button>
+            </li>
+            <li class="option">
+              <button class="material-button option3" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <span class="fa fa-file-text-o" aria-hidden="true"></span>
+              </button>
+            </li>
+          </ul>
+          <button  style="background-color:#7e57c2" class="material-button material-button-toggle" type="button">
+            <span class="fa fa-plus" aria-hidden="true"></span>
+          </button>
+        </div>
+                  </div>
+                  <div class="fh5co-feature">
+                    <div class="icon"><i class="icon-ribbon"></i></div>
+                     <h3>Miercoles</h3>
+                          <br>
+                     <br>
+                     
+                    
+                            <div class="material-button-anim">
+          <ul class="list-inline" id="options">
+            <li class="option">
+              
+            </li>
+            <li class="option">
+              <button class="material-button option2" type="button">
+                <span class="fa fa-pencil" aria-hidden="true"></span>
+              </button>
+            </li>
+            <li class="option">
+              <button class="material-button option3" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <span class="fa fa-file-text-o" aria-hidden="true"></span>
+              </button>
+            </li>
+          </ul>
+          <button style="background-color:#42a5f5;" class="material-button material-button-toggle" type="button">
+            <span    class="fa fa-plus" aria-hidden="true"></span>
+          </button>
+        </div>
+                  </div>
+
+                  <div class="fh5co-feature">
+                     <div class="icon"><i class="icon-ribbon"></i></div>
+                     <h3>Jueves</h3>
+                           <br>
+                     <br>
+
+                     
+                    
+                            <div class="material-button-anim">
+          <ul class="list-inline" id="options">
+            <li class="option">
+              
+            </li>
+            <li class="option">
+              <button class="material-button option2" type="button">
+                <span class="fa fa-pencil" aria-hidden="true"></span>
+              </button>
+            </li>
+            <li class="option">
+              <button class="material-button option3" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <span class="fa fa-file-text-o" aria-hidden="true"></span>
+              </button>
+            </li>
+          </ul>
+          <button style="background-color:#76ff03;" class="material-button material-button-toggle" type="button">
+            <span class="fa fa-plus" aria-hidden="true"></span>
+          </button>
+        </div>
+                  </div>
+                  <div class="fh5co-feature">
+                    <div class="icon"><i class="icon-ribbon"></i></div>
+                     <h3>Viernes</h3>
+                          <br>
+                     <br>
+                     
+                    
+                            <div class="material-button-anim">
+          <ul class="list-inline" id="options">
+            <li class="option">
+              
+            </li>
+            <li class="option">
+              <button class="material-button option2" type="button">
+                <span class="fa fa-pencil" aria-hidden="true"></span>
+              </button>
+            </li>
+            <li class="option">
+              <button class="material-button option3" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <span class="fa fa-file-text-o" aria-hidden="true"></span>
+              </button>
+            </li>
+          </ul>
+          <button style="background-color:#37474f;" class="material-button material-button-toggle" type="button">
+            <span class="fa fa-plus" aria-hidden="true"></span>
+          </button>
+        </div>
+
+
+                     </p>
+                  </div>
+                  <div class="fh5co-feature">
+                    <div class="icon"><i class="icon-ribbon"></i></div>
+                     <h3>Sabado</h3>
+                          <br>
+                     <br>
+                     
+                    
+                            <div class="material-button-anim">
+          <ul class="list-inline" id="options">
+            <li class="option">
+              
+            </li>
+            <li class="option">
+              <button class="material-button option2" type="button">
+                <span class="fa fa-pencil" aria-hidden="true"></span>
+              </button>
+            </li>
+            <li class="option">
+              <button class="material-button option3" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <span class="fa fa-file-text-o" aria-hidden="true"></span>
+              </button>
+            </li>
+          </ul>
+          <button  style="background-color:black;" class="material-button material-button-toggle" type="button">
+            <span class="fa fa-plus" aria-hidden="true"></span>
+          </button>
+        </div>
+                  </div>
+                  <br>
+                  <br>
+                  <p><h1 class="col-md-8 col-md-offset-3 text-right" style="  left:0;   color: #F7BE81;; font-size: 2.6em;">Horario mes de septiembre</h1></p>
+              </div>
+            </div>
+         </div>
+      </div>
+</div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+  <script src="js/usuario/jquery.easing.1.3.js"></script>
+  <script src="js/usuario/main.js"></script>
+ <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel" style="text-align: center;">Publicar nuevo Horario</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Tipo de Entrenamiento:</label>
+            <input type="text" class="form-control" id="recipient-name" placeholder="Ej:Evaluacion Seguiento Psicologico
+                    
+                     7:45 am - 12:00 am" >
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Descripción del Horario:</label>
+            <textarea class="form-control" id="message-text" placeholder="Ej: Se llevara a cabo en el club deportivo del Jugador.
+            
+            "></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button name="button3" class="btn btn-primary" type="button" onclick='swal("¡Horario publicado!", "¡Su Horario fue publicado exitosamente!", "success")' value="Alerta de confirmación">Publicar Horario</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+   
+  <script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+ <script type="text/javascript" src="js/formValidation.js"></script>
+    <script type="text/javascript" src="js/bootstrapp.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+  <script>
+            $(document).ready(function () {
+    $('.material-button-toggle').click(function () {
+        $(this).toggleClass('open');
+        $('.option').toggleClass('scale-on');
+    });
+});
+          </script>
+          <script type="text/javascript">
+$(document).ready(function() {
+    $('#subirimagen').formValidation({
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            firstFile: {
+                validators: {
+                    file: {
+                        extension: 'jpg',   
+                        
+                        message: 'Porfavor seleccione una imagen'
+                    }
+                }
+            },
+            secondFile: {
+                validators: {
+                    file: {
+                        extension: 'pdf',
+                        type: 'application/pdf',
+                        minSize: 1024*1024,
+                        message: 'Please choose a pdf file with a size more than 1M.'
+                    }
+                }
+            },
+            thirdFile: {
+                validators: {
+                    file: {
+                        extension: 'pdf',
+                        type: 'application/pdf',
+                        maxSize: 10*1024*1024,
+                        message: 'Please choose a pdf file with a size less than 10M.'
+                    }
+                }
+            },
+            fourthFile: {
+                validators: {
+                    file: {
+                        extension: 'pdf',
+                        type: 'application/pdf',
+                        minSize: 1024*1024,
+                        maxSize: 10*1024*1024,
+                        message: 'Please choose a pdf file with a size between 1M and 10M.'
+                    }
+                }
+            }
+        }
+    })
+    .on('success.form.fv', function(e) {
+        e.preventDefault();
+        $('#defaultForm').data('formValidation').disableSubmitButtons(true);
+    });
+});
+</script>
+
+
+
+ 
+
+
+
+
+
+  
+          
+

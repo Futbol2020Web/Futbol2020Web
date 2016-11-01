@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+	<title>Tablas</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-table.css">
+</head>
+<style>
+  .container {
+    background-image: url(img/fondofutbol.png.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 760px;
+  }
+
+  header{
+    color: #fff;
+  }
+
+}
+    table, table td, table tr {
+  padding:0px;
+  border-spacing: 0px;
+}
+
+table {
+  border:1px black solid;
+  border-radius:5px;
+  min-width:400px;
+  font-family: Helvetica,Arial;
+}
+
+table td {
+  padding:6px;
+}
+
+table tr:first-child td:first-child {
+  border-radius:5px 0px 0px 0px;
+}
+
+table tr:first-child td:last-child {
+  border-radius:0px 5px 0px 0px;
+}
+
+table tr:last-child td:first-child {
+  border-radius:0px 0px 0px 5px;
+}
+
+table tr:last-child td:last-child {
+  border-radius:0px 0px 5px 0px;
+}
+
+table td:not(:last-child) {
+  border-right:1px #666 solid;
+}
+
+
+table tr:nth-child(2n) {
+  background: #87CEEB;
+}
+
+table tr:nth-child(2n+1){
+  background: #ADD8E6;
+}
+
+table.header tr:not(:first-child):hover, table:not(.header) tr:hover {
+  background:#E0FFFF;
+}
+
+table:not(.header) tr {
+  text-align: left;
+}
+
+table.header tr:first-child {
+  font-weight: bold;
+  color:#fff;
+  background-color: #444;
+  border-bottom:1px #000 solid;
+}
+
+table.header tr:nth-child(n+2) {
+  text-align: right;
+}
+ 
+table.header {
+background-color: red;
+} 
+
+</style>
+<body>
+
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <header>
+      <h1 class="page-header text-center">Bases de datos de jugadores</h1>
+    </header>
+ 
+    <table id="table-transform" data-toggle="table" data-row-style="rowStyle" data-pagination="true" data-search="true">
+      <thead>
+
+        <tr>
+          <th>ID</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Fecha Nacimiento</th>
+          <th>Genero</th>
+          <th>RH</th>
+          <th>E.p.s.</th>
+          <th>Telefono</th>
+          <th>Direccion</th>
+          <th>Correo Electronico</th>
+          <th>Barrio</th>
+          <th>Posicion</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>00011002447</td>
+          <td>Anthony Ricardo</td>
+          <td>Jimenez Beltran</td>
+          <td>10-enero-2000</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Sanitas</td>
+          <td>3102051585</td>
+          <td>Carrera 99 A 71-39 sur</td>
+          <td>pretico2607hotmail.com</td>
+          <td>Metro Vivienda</td>
+          <td>Central</td>
+          <td><a href="seguimiento.html"> <button>Seguimiento</button></a></td>
+        </tr>
+
+        <tr>
+          <td>99050305720</td>
+          <td>Daniel Andrés</td>
+          <td>Paja Plata</td>
+          <td>03-Mayo-1999</td>
+          <td>Masculino</td>
+          <td>A+</td>
+          <td>Cruz Blanca</td>
+          <td>3214301360</td>
+          <td>Calle 128G ·89-85</td>
+          <td>paolaplata31gmail.com</td>
+          <td>Suba Rincón</td>
+          <td>Volante</td>
+        <td><a href="seguimie 2.html"> <button>Seguimiento</button></a></td>
+        </tr>
+        
+        <tr>
+          <td>99061618968</td>
+          <td>Iesua Germán</td>
+          <td>Ramirez Pérez</td>
+          <td>16-Junio-1999</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Sisben</td>
+          <td>3195918420</td>
+          <td>Carrera 22·29 30 Sur</td>
+          <td>iesua16rgmail.com</td>
+          <td>Quiroga</td>
+          <td>Volante</td>
+       <td><a href="seguimie 3.html"> <button>Seguimiento</button></a></td>
+        </tr>
+       
+
+        <tr>
+          <td>1192763342</td>
+          <td>Miguel Alfonso</td>
+          <td>López Aristizabal</td>
+          <td>02-Febrero-2001</td>
+          <td>Masculino</td>
+          <td>A+</td>
+          <td>Sisbén</td>
+          <td>3193740411</td>
+          <td>Carrera 180 ·69-34 Sur</td>
+          <td>ml27099gmail.com</td>
+          <td>La Esperenza</td>
+          <td>Delantero</td>
+        <td><a href="seguimie 4.html"> <button>Seguimiento</button></a></td>
+        </tr>
+        
+
+        <tr>
+          <td>1000784251</td>
+          <td>Nicolás</td>
+          <td>Ardila Pantevis</td>
+          <td>08-Noviembre-2001</td>
+          <td>Masculino</td>
+          <td>A+</td>
+          <td>Cruz Blanca</td>
+          <td>3118324604</td>
+          <td>Carrera 18V ·69B-30 Sur</td>
+          <td>nicolasardilahotmail.com</td>
+          <td>La Ezperanza</td>
+          <td>Defensa</td>
+        <td><a href="seguimie 5.html"> <button>Seguimiento</button></a></td>
+        </tr>
+        
+        
+        <tr>
+          <td>98091412845</td>
+          <td>Nicolás</td>
+          <td>Santos Flores</td>
+          <td>14-Septiembre-1998</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Capital Salud</td>
+          <td>3132181461</td>
+          <td>Calle 59A sur ·74-03</td>
+          <td>nigco-8mshotmail.com</td>
+          <td>Estancia</td>
+          <td>Arquero</td>
+         <td><a href="seguimie 6.html"> <button>Seguimiento</button></a></td>
+        </tr>
+        
+        <tr>
+          <td>1079097655</td>
+          <td>Kevin Jahir</td>
+          <td>Asprilla Moreno</td>
+          <td>21-Diciembre-1997</td>
+          <td>Masculino</td>
+          <td>A+</td>
+          <td>Sisbén</td>
+          <td>3133623016</td>
+          <td>No Aplica</td>
+          <td>jahir-77hotmail.com</td>
+          <td>Colvenas</td>
+          <td>Delantero</td>
+           <td><a href="seguimie 7.html"> <button>Seguimiento</button></a></td>
+        </tr>
+     
+        <tr>
+          <td>1010127142</td>
+          <td>Andrés Camilo</td>
+          <td>Ruiz Patiño</td>
+          <td>23-Abril-2000</td>
+          <td>Masculino</td>
+          <td>O-</td>
+          <td>Compensar</td>
+          <td>3138467879</td>
+          <td>Carrera 105· 159A-89</td>
+          <td>camiloruiz8gmail.com</td>
+          <td>Tuna Baja</td>
+          <td>Defensa</td>
+            <td><a href="seguimie 8.html"> <button>Seguimiento</button></a></td>
+        </tr>
+       
+        <tr>
+          <td>1024574970</td>
+          <td>Christian Camilo</td>
+          <td>Parrasi Santana</td>
+          <td>06-Octubre-1996</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Sisben</td>
+          <td>3125515083</td>
+          <td>Carrera 75F·59A-09</td>
+          <td>camiloc-12hotmail.com</td>
+          <td>Estancia</td>
+          <td>Volante</td>
+          <td><a href="seguimie 9.html"> <button>Seguimiento</button></a></td>
+        </tr>
+       
+        <tr>
+          <td>1007722230</td>
+          <td>Jesús David</td>
+          <td>Ospina Comas</td>
+          <td>11-Noviembre-1999</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Capital Salud</td>
+          <td>3118235298</td>
+          <td>Carrera 83·69A-85</td>
+          <td>jesus.comashotmail.com</td>
+          <td>Clarita</td>
+          <td>Volante</td>
+            <td><a href="seguimie 10.html"> <button>Seguimiento</button></a></td>
+        </tr>
+        
+        <tr>
+          <td>51937095</td>
+          <td>Juan David</td>
+          <td>Vargas Chavez</td>
+          <td>01-Junio-1997</td>
+          <td>Masculino</td>
+          <td>A+</td>
+          <td>Compensar</td>
+          <td>3142119851</td>
+          <td>Calle 21·88A-49</td>
+          <td>mlchavezshotmail.com</td>
+          <td>Hayuelos</td>
+          <td>Volante</td>
+          <td><a href="seguimie 11.html"> <button>Seguimiento</button></a></td>
+        </tr>
+        
+        <tr>
+          <td>99071411969</td>
+          <td>Sebastián Rubén</td>
+          <td>Galindo Guerrero</td>
+          <td>14-Julio-1999</td>
+          <td>Masculino</td>
+          <td>B+</td>
+          <td>Sanitas</td>
+          <td>3212286313</td>
+          <td>Diagonal 106·16-86</td>
+          <td>sebitasgalhotmail.com</td>
+          <td>Fontibón</td>
+          <td>Volante</td>
+           <td><a href="seguimie 12.html"> <button>Seguimiento</button></a></td>
+        </tr>
+       
+        <tr>
+          <td>1010016921</td>
+          <td>Juan Sebastián</td>
+          <td>Castillo Martínez</td>
+          <td>20-Enero-2000</td>
+          <td>Masculino</td>
+          <td>A+</td>
+          <td>Famisanar</td>
+          <td>3108158991</td>
+          <td>Carrera 104 no 13B-76</td>
+          <td>jua46chilehotmail.com</td>
+          <td>Sabana Grande</td>
+          <td>Volante</td>
+             <td><a href="seguimie 13.html"> <button>Seguimiento</button></a></td>
+        </tr>
+       
+        <tr>
+          <td>1022</td>
+          <td>Julian</td>
+          <td>Barrera Avila</td>
+          <td>25-Marzo-1997</td>
+          <td>Masculino</td>
+          <td>A+</td>
+          <td>Compensar</td>
+          <td>3195779935</td>
+          <td>Calle 3A·68D-12</td>
+          <td>julianbarrera.46gmail.com</td>
+          <td>La Igualdad</td>
+          <td>Defenza</td>
+            <td><a href="seguimie 14.html"> <button>Seguimiento</button></a></td>
+        </tr>
+        
+        <tr>
+          <td>1010057923</td>
+          <td>David Sebastián</td>
+          <td>Guerrero Marín</td>
+          <td>08-Diciembre-2000</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Compensar</td>
+          <td>3142633631</td>
+          <td>Calle 170F83-25</td>
+          <td>No Aplica</td>
+          <td>La Clrita</td>
+          <td>Delantero</td>
+            <td><a href="seguimie 15.html"> <button>Seguimiento</button></a></td>
+        </tr>
+       
+        <tr>
+          <td>98111660490</td>
+          <td>Miguel Angel</td>
+          <td>Ruiz Vanegas</td>
+          <td>16-Noviebmre-1998</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Colsubsidio</td>
+          <td>3013318740</td>
+          <td>Carrera 57·159-31</td>
+          <td>miguelangelruizvanegasgmail.com</td>
+          <td>Cantalejo</td>
+          <td>Delantero</td>
+            <td><a href="seguimie 16.html"> <button>Seguimiento</button></a></td>
+        </tr>
+       
+        <tr>
+          <td>98091252449</td>
+          <td>Juan Diego</td>
+          <td>Uvevar Robles</td>
+          <td>12-Septiembre-1998</td>
+          <td>Masculino</td>
+          <td>AB+</td>
+          <td>Famisanar</td>
+          <td>3112063365</td>
+          <td>Calle 18A 114A-63</td>
+          <td>juandi36c.g98gmail.com</td>
+          <td>Fontibon</td>
+          <td>Delantero</td>
+            <td><a href="seguimie 17.html"> <button>Seguimiento</button></a></td>
+        </tr>
+       
+        <tr>
+          <td>1012426774</td>
+          <td>Luis Felipe</td>
+          <td>Moreno Cañon</td>
+          <td>31-Octubre-1995</td>
+          <td>Masculino</td>
+          <td>A+</td>
+          <td>Sisben</td>
+          <td>7324456</td>
+          <td>No Aplica</td>
+          <td>felipemoreno2754gmail.com</td>
+          <td>Olivos 4</td>
+          <td>Delantero</td>
+             <td><a href="seguimie 18.html"> <button>Seguimiento</button></a></td>
+        </tr>
+      
+        <tr>
+          <td>1010145205</td>
+          <td>Juan David</td>
+          <td>Arcila Sepulveda</td>
+          <td>16-Marzo-1999</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Cruz Blanca</td>
+          <td>4031670</td>
+          <td>Carrera 92·42-20 Sur</td>
+          <td>No Aplica</td>
+          <td>Dindalito</td>
+          <td>Delantero</td>
+             <td><a href="seguimie 19.html"> <button>Seguimiento</button></a></td>
+        </tr>
+    
+        <tr>
+          <td>97070708926</td>
+          <td>Kevin Daniel</td>
+          <td>Castro Amaya</td>
+          <td>07-Julio-1997</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Coomeva</td>
+          <td>3028024</td>
+          <td>Calle 24a ·24g-57 Sur</td>
+          <td>No Aplica</td>
+          <td>Centenario</td>
+          <td>Defensa</td>
+           <td><a href="seguimie 20.html"> <button>Seguimiento</button></a></td>
+        </tr>
+      
+        <tr>
+          <td>100052101</td>
+          <td>Kevin Sneider</td>
+          <td>Barbosa García</td>
+          <td>23-Enero-2001</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Polinal</td>
+          <td>3208687550</td>
+          <td>Diagoanl 16B·104-23</td>
+          <td>Kevinbargarhotmail.com</td>
+          <td>Fontibon</td>
+          <td>Volante</td>
+             <td><a href="seguimie 21.html"> <button>Seguimiento</button></a></td>
+        </tr>
+       
+        <tr>
+          <td>98011560148</td>
+          <td>Juan Felipe </td>
+          <td>Ramos Gomez</td>
+          <td>15-Enero-1998</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Cafe Salud</td>
+          <td>3214320433</td>
+          <td>Carrera 87-·18-53</td>
+          <td>jramosgomezhotmail.com</td>
+          <td>Hayuelos</td>
+          <td>Defenza</td>
+             <td><a href="seguimie 22.html"> <button>Seguimiento</button></a></td>
+        </tr>
+       
+        <tr>
+          <td>99070500864</td>
+          <td>Ronal Jair</td>
+          <td>Chaparro Mendez</td>
+          <td>05-Julio-1999</td>
+          <td>Masculino</td>
+          <td>O+</td>
+          <td>Famisanar</td>
+          <td>3219873233</td>
+          <td>Transversal 12G </td>
+          <td>djhchaparrogmail.com</td>
+          <td>San Jorge</td>
+          <td>Volante</td>
+             <td><a href="seguimie 23.html"> <button>Seguimiento</button></a></td>
+        </tr>
+      
+            <tr>
+              <td>99060115725</td>
+              <td>Nicolás Alexander</td>
+              <td>Hernández Machado</td>
+              <td>01-Junio-1999</td>
+              <td>Masculino</td>
+              <td>O+</td>
+              <td>Cafe Salud</td>
+              <td>3114497939</td>
+              <td>Calle 5 · 4-67</td>
+              <td>yaris-1982hotmail.com</td>
+              <td>San jose</td>
+              <td>Volante</td>
+                 <td><a href="seguimie 24.html"> <button>Seguimiento</button></a></td>
+            </tr>
+        
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+</body>
+</html>

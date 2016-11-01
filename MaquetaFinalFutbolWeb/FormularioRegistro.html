@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>formulario</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/sweetalert.css">
+<link rel="stylesheet" href="js/bootstrap.js">
+s
+</head>
+
+<body>
+<style>
+body{
+	background-image: url(img/Formulario/tecnico.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat; 
+	background-size: 100% 100%;
+		
+
+}
+*{
+	margin: 0 auto;
+	font-family:verdana;
+}
+p{
+	display: inline-block;
+	width: 30%;
+	clear: both;
+	color: white;
+
+	}
+	nav{
+		background-color:rgba(255,255,255.3);
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		height: 80px;
+		font-size: 60px;
+	}
+	i{
+		float: left;
+		width: 380px;
+	}
+
+input {
+		width: 50%;
+		color: black;
+		display: inline-block;
+		border: 1px solid black;
+	}
+	.izq{
+		width: 10%;
+	
+	}
+	.colorg:hover{
+		background-color:#EBCF55;
+	}
+	button{
+		background-color:#C8C8C8;
+		border: 1px solid #d4d4d4;
+		color: black;
+	}
+	textarea{
+		color: white;
+		width: 80%;
+		height: 300px;
+
+	}
+
+	#formulario{
+		background-color: black;
+		background: rgba(100,100,100,.2);		
+		display: inline-block;
+		padding: 20px;
+
+	}
+	#imagenlateral{
+		
+		
+		width: 49%;
+		height: 2000px;
+		background-attachment: fixed;
+
+			
+
+	}
+	#regresar{
+		width: 300px;
+	}
+	#enviar{
+		width: 400px;
+
+	}
+
+h1{
+	color: white;
+}
+i{
+	color: white;
+}
+#expreso{
+	color: red;
+}
+		
+
+</style>
+
+<nav><center><p id="expreso">Expreso Rojo</p></center></nav>
+<center>
+<section class="row">
+	
+	<div id="formulario" class="">
+		<h1 class="color1">FORMULARIO DE REGISTRO (USUARIO)</h1>
+<form name="miformulario" id="miformulario" method="get" autocomplete="on"><br><br>
+<h1>DATOS DEL ASPIRANTE</h1><br>
+<div class="col-md-6">
+	<p>Nombres:&nbsp;</p><input type="text" name="Nombre" id="Nombre" title="" placeholder="*" required><br><br>
+</div>
+<div class="col-md-6">
+<p>Apellidos:&nbsp;</p><input type="text" name="Apellido" id="Apeellido" title="" placeholder="*" required><br><br>	
+</div>
+
+
+<div class="col-md-6">
+<p>Documento de identidad:&nbsp;</p><input type="number" name="documento" id="documento" title="" placeholder="Solo se permiten números*" required>
+	
+</div>
+<div class="col-md-6">
+<p>Fecha de nacimiento:&nbsp;</p><input type="date" name="Fecha" id="Fecha" title="" placeholder="*" required><br><br>
+	
+</div>
+
+<div class="col-md-6">
+	
+<p>Contraseña:&nbsp;</p><input type="password" name="contraseña" id="contraseña" title="" placeholder="*" required><br><br>
+</div>
+<div class="col-md-6">
+	
+<p>Confirmar Contraseña:&nbsp;</p><input type="password" name="ccontraseña" id="ccontraseña" title="" placeholder="*" required><br><br>
+</div>
+
+<i>Genero:</i>
+<div class="col-md-3"><p>Masculino:&nbsp;</p> <input class="izq" type="radio" name="M" id="M" title="" placeholder="*" required></div>
+<div class="col-md-5"><p>Femenino:&nbsp;</p> <input class="izq" type="radio" name="M" id="M" title="" placeholder="*" required> <br><br></div> <br><br><br>
+<div class="col-md-6">
+	
+<p>RH:&nbsp;</p><input type="text" name="RH" id="RH" title="" placeholder="*" required maxlength="4"> <br><br>
+</div>
+<div class="col-md-6">
+<p>EPS:&nbsp;</p><input type="text" name="EPS" id="EPS" title="" placeholder="*" required maxlength="25"> <br><br>
+	
+</div>
+<div class="col-md-6">
+	
+<p>Teléfono:&nbsp;</p><input type="number" name="Fecha" id="Fecha" title="" placeholder="solo se permiten números*" required><br><br>
+</div>
+<div class="col-md-6">
+	
+<p>Email:&nbsp;</p><input type="Email" name="Email" id="Email" title="" placeholder="*" required><br><br>
+</div>
+<br><br><br><br><br><br>
+
+
+<br>
+<br>
+<br>
+<input type="submit" id="enviar"  href="#menu-toggle" class="btn btn-success" id="menu-toggle" value="Enviar formulario"></input>
+
+	<br>
+	<br>
+	<br>
+</form>
+
+<a id="regresar" href="index.html" class="btn btn-primary" id="menu-toggle" >Regresar al inicio</a>
+
+	</div>
+
+	
+</section>	
+</center>
+<script>
+	
+</script>
+<script src="js/sweetalert.min.js"></script>
+</body>
+
+<footer>
+	
+</footer>
+</html>

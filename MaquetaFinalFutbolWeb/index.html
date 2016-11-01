@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>FutbolWeb</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/logo/logof.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/buscarpagina01.css">
+  <link rel="stylesheet" href="css/estiloregistro.css">
+  <link rel="stylesheet" type="text/css" href="css/computador.css">
+  <link rel="stylesheet" type="text/css" href="css/carrousel.css" />
+  <link rel="stylesheet" href="css/Botones.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+   
+  
+   
+   <!-- Cards -->
+   <link rel="stylesheet" href="css/uniformeindez.css">
+  <script src="js/validacion.js" type="text/javascript"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src='js/index.js'></script>
+</head>
+<body>
+	<header>
+    <nav>
+     <ul>
+      <input type="text" id="buscador" placeholder="Buscar">
+    </ul>
+    <ul>
+      <a class="colo" href='#nosotro'><li>Nosotros</li></a>
+      <a class="colo" href='#jumbotron2'><li>Torneos</li></a>
+      <a class="colo" href='#jumbotron1'><li>Convocatorias</li></a>
+      <a class="colo" href='Uniformes.html'><li>Uniformes</li></a>
+    </ul>
+    <img id='logo' src='img/logo/Logofw2.png' width="280" height="280">
+    <ul>
+      <a class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">Ingresar/Registrase </a>
+    </ul>
+  </nav>
+</header>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-login">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="#" class="active" id="login-form-link">Ingresar</a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" id="register-form-link">Registrarse</a>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+               <form class="Form_Contacto" action="#" method="POST" name="usuariologin" id="login-form"  style="display: block;">
+                <div class="form-group">
+                 <label for="email"></label>
+                 <input id="email" tabindex="1" class="form-control" name="email" type="text" value="" minlength="1" maxlength="30" required="" placeholder="Documento o Correo Electronico" >
+               </div>
+               <div class="form-group">
+                <label for="password"></label>
+                <input id="password" tabindex="2" class="form-control" name="password" type="password" value="" minlength="1"  maxlength="15" required="" placeholder="Ingresar contraseña">
+              </div>
+              <div class="form-group text-center">
+                <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                <label for="remember">Recordar Contraseña</label>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-6 col-sm-offset-3">
+                    <button class="form-control btn btn-login"  id="button" type="button"  onClick="EnviarUsuario()" value="Iniciar sesión" data-toggle="tooltip" data-placement="right" title="Corrdinador:1018492218, Instructor:99061618968, Jugador:98051354524, Padre:1073239252" >Iniciar Sesión</button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="text-center">
+                      <a class="forgot-password" href="olvido.html" value="Iniciar sesión">¿Olvidó su contraseña?</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <form id="register-form" action="Formularioprueba.html" method="post" role="form" style="display: none;">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-6 col-sm-offset-3">
+                    <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Registrarse ahora">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<section id='banner'>
+  <div id="particles-js"></div>
+</section>
+<div class="jumbotron">
+  <center><h1 class="jumbo">Nosotros</h1></center>
+  <center><p class="jumbo">Historia y valores del Expreso Rojo</p></center>  
+</div>
+<section id='body'>
+  <section id="nosotro">
+    <div class="nosotros">
+      <div class="computador">
+        <div class="container">
+         <div class="row">
+          <div class="col-lg-9 col-lg-offset-0">
+            <div class="container">
+             <div class="row">
+              <div class="col-md-4">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                   <span class="side-tab" data-target="#tab1" data-toggle="tab" role="tab" aria-expanded="false">
+                    <div class="panel-heading" role="tab" id="headingOne"data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                     <h4 class="panel-title1"><strong>Visión.</strong></h4>
+                   </div>
+                 </span>
+                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body1">
+                    <strong>"</strong>Cada año a partir del 15 de febrero de 1991 que fue formado nuestro club expreso rojo con una organización reconocida nacional e internacional como uno de los mayores clubes deportivos de futbol.
+                    <br>
+                    En nuestro club expreso rojo se identificó para la formación de seres humanos, personas más futbolísticas con misión y visión, con los valores humanos a cultivar y practicar".
+                    <strong>“El principal enemigo del éxito es el temor, en lo que el hombre teme, eso le vendr<strong>"</strong> </strong>
+                  </div>
+                </div>
+              </div> 
+              <div class="panel panel-default">
+               <span class="side-tab" data-target="#tab2" data-toggle="tab" role="tab" aria-expanded="false">
+                <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                 <h4 class="panel-title2 collapsed"><strong>Misión.</strong>  </h4>
+               </div>
+             </span>
+             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body2">
+                <p><strong>"</strong>Trabajar con el talento humano idóneo, comprometido y creativo el cual apoyamos brindándoles comodidad y confort en las prácticas deportivas del futbol con recreación y de ocupación con tal de que se obtenga un beneficio de procesos limpios, asegurados y un mejoramiento organizado, clubes deportivos competitivos.<strong>"</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+           <span class="side-tab" data-target="#tab3" data-toggle="tab" role="tab" aria-expanded="false">
+            <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+             <h4 class="panel-title3"><strong>Nuestros valores.</strong></h4>
+           </div>
+         </span>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body3">
+            <p><strong>Los valores que cumplimos en nuestra institución son:</strong>
+              <br>
+
+              -Amor y respeto con la naturaleza.
+              <br>
+              - Comprensión.
+              <br>
+              -Honestidad.
+              <br>
+              -Humildad.
+              <br>
+              - Perdón.
+              <br>
+              - Sencillez.
+              <br>
+              - Alegría.
+              <br>
+              -Equidad.   
+              <br>                        
+              -Respeto. 
+              <br>                          
+              -Transparencia. 
+              <br>                          
+              -Cumplimiento.
+              <br>                           
+              -Innovación. 
+              <br>                          
+              -Compromiso.</p>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="panel panel-default">
+        <span class="side-tab" data-target="#tab4" data-toggle="tab" role="tab" aria-expanded="false">
+          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <!-- macbook-->
+        <div class="md-macbook-pro md-glare">
+         <div class="md-lid">
+          <div class="md-camera"></div>
+          <div class="md-screen">
+           <!-- contentenido-->                
+           <div class="tab-featured-image">
+            <div class="tab-content">
+             <div class="tab-pane  in active" id="tab1">
+              <img src="img/computador/FOTOS 014.jpg" alt="tab1" class="img img-responsive">
+            </div>
+            <div class="tab-pane " id="tab2">
+             <img src="img/computador/FOTOS 003.jpg" alt="tab2" class="img img-responsive">
+           </div>
+           <div class="tab-pane fade" id="tab3">
+            <img src="img/computador/FOTOS 066.jpg" alt="tab1" class="img img-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="md-base"></div>
+</div> <!-- end macbook -->
+</div>
+</div>
+</section>
+<div id="jumbotron1" class="jumbotron">
+  <center><h1 class="jumbo1">Convocatorias</h1></center>
+  <center><p class="jumbo1">Aplica Para Jugadores e Instructores</p></center> 
+</div>
+<section id="carrousel">
+ <div id="wowslider-container0">
+  <div class="ws_images"><ul>
+    <li><a href="#"><img src="img/carrousel/06.jpg" alt="wowslider.com" title="" id="wows0_0"/></a> <h1>Convocatorias Jugadores</h1><a href="ConvocatoriaJugador.html" class="btn btn-outline btn-danger">Más información </a></li>
+    <li><a href="#"><img src="img/carrousel/07.jpg" alt="" title="" id="wows0_1"/></a><h1>Convocatorias Instructores</h1>
+      <a href="ConvocatoriasInstructor.html" class="btn btn-outline btn-info">Más información</a></li>
+    </ul>
+  </div>
+  <div class="ws_bullets"><div>
+    <a href="#" title=""><span><img src="img/carrousel/06.jpg" alt=""/></span></a>
+    <a href="#" title=""><span><img src="img/carrousel/07.jpg" alt=""/></span></a>
+  </div></div>
+  <div class="ws_shadow"></div>
+</div>         
+</section>
+<div id="jumbotron2" class="jumbotron">
+  <center><h1 class="jumbo1">Torneos y Uniformes</h1></center>
+  <p class="jumbo2"></p>
+</div>
+<section id="torneos">
+ <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="img/frontend/torneos.jpg" style="width: 100%; height: 589px; " alt="">
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item">
+      <div style="background-image:url(img/todad/Su16_NABD_FB_HypervenomPhantomII_23_D6_V1_56626.jpg); background-size: 100%; background-repeat: no-repeat; padding: 20px;  width: 100%; height: 589px;">
+          <div class="fh5co-project-style-1">
+         <div class="container">
+      
+            <div class="row p-b">
+               <div class="col-md-6">
+                  <div class="fh5co-grid fh5co-grid-1" style="background-image: url(img/todad/Bournemouth.jpg);">
+                     <a href="Uniformes.html" class="image-popup"><i class="icon-eye2"></i> <img src="img/todad/Bournemouth.jpg" alt="Image" class="sr-only img-responsive hide"></a>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="fh5co-grid fh5co-grid-2" style="background-image: url(img/todad/16102013224342258749.jpg);">
+                           <a href="Uniformes.html" class="image-popup"><i class="icon-eye2"></i> <img src="images/img_2.jpg" alt="Image" class="sr-only img-responsive hide"></a>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="fh5co-grid fh5co-grid-2" style="background-image: url(img/todad/gufytjgdtss.jpg);">
+                           <a href="Uniformes.html" class="image-popup"><i class="icon-eye2"></i> <img src="images/img_3.jpg" alt="Image" class="sr-only img-responsive hide"></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="fh5co-grid fh5co-grid-3" style="background-image: url(img/todad/Nike.jpg);">
+                           <a href="Uniformes.html" class="image-popup"><i class="icon-eye2"></i> <img src="images/img_4.jpg" alt="Image" class="sr-only img-responsive hide"></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+               </div>
+      </div>
+      </div> 
+    </div>
+  </div>
+</div>
+</section>
+</section>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/particles2.js"></script>
+<script src="js/registro.js"></script>
+<script type="text/javascript" src="js/wowslider.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+<footer>
+ <div class="col-md-3">
+  <ul class="social-network social-circle">
+    <li><a  class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+    <li><a  class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+    <li><a  class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+  </ul>       
+</div>
+<p>Derechos de autor: William Moreno, Iesua Ramirez, Adhael Rodriguez, Cristian Suesca.</p>
+<div class="col-md-2 col-md-push-7 ">
+  <ul>
+   <li><a class="colo" ><strong>Español</strong></a></li>
+   <li><a class="colo" href="indexEnglish.html">Ingles</a></li>
+ </ul>       
+</div>
+<p>Esta página está autorizada  y contiene información del club de futbol "Expreso Rojo"</p>
+</footer>
+</html>

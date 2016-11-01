@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Seguimientos Jugadores</title>
+  <link rel="shortcut icon" href="img/logo/logof.jpg" type="image/x-icon">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-table.css">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/buscarpaginausuarios.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <script src="js/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">  
+        <br>
+        <center>  <img alt="User Pic" src="img/usuarios/Avatar anonimo.png" class="img-circle img-responsive" style="height: 80px;"></center>
+        <li class="sidebar-brand">
+         <a href="MenuUsuarioEntrenador.html">
+          <em class="fa fa-user"></em>&nbsp;Usuario Entrenador:
+        </a>
+      </li>
+      <ul>
+        <input type="text" id="buscador" placeholder="Buscar">
+      </ul>
+      <br>
+      <li>
+      </li>
+      <li>
+        <a href="actividades(entrenador).html"><em class="fa fa-book"></em>&nbsp;Generar actividades</a>
+      </li>
+      <li>
+        <a href="ConsultarListaJugadores(Entrenador).html"><em class="fa fa-users"></em>&nbsp;Consultar Lista Jugadores</a>
+      </li>
+      <li>
+        <a href="#"><em class="fa fa-futbol-o"></em>&nbsp;Seguimiento del jugador</a>
+      </li>
+      <li>
+        
+      </li>
+      <li>
+        <a href="Torneos(Entrenador).html"><em class="fa fa-calendar"></em>&nbsp; Torneos</a>
+      </li>
+      <li>
+        <a href="ConsultarhorariosEntrenador.html"><em class="fa fa-calendar-check-o"></em>&nbsp;Horarios</a>
+      </li>
+      <li>
+      </li>
+      <li>
+        <a href="index.html"><em class="fa fa-power-off"></em>&nbsp;Cerrar sesión </a>
+      </li>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+         <p><a href="#menu-toggle" class="btn btn-outline  btn-danger" id="menu-toggle">Cerrar/Mostrar</a></p>
+         <div class="container">
+
+           <header>
+            <h1 class="page-header text-center">Tabla de seguimientos</h1>
+          </header>
+          <h2>Vista de seguimiento jugadores</h2>
+          <p>Todos los usuarios "Jugadores" registrados hasta el momento en el sistema con un seguimiento.</p>
+          <table id="table-transform" data-toggle="table" data-short-name="fechaRegistro" data-short-order="desc" data-show-toogle="true" data-show-columns="true" data-side-pagination="client" data-page-list="[5, 10, 20, 50, 100, 200]" data-row-style="rowStyle" data-pagination="true" data-search="true" >
+
+           
+            <thead>
+
+              <tr>
+                <th>ID</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Fecha Nacimiento</th>
+                <th>Genero</th>
+                
+                <th>Posicion</th>
+
+                <th>Ver seguimiento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>00011002447</td>
+                <td>Anthony Ricardo</td>
+                <td>Jimenez Beltran</td>
+                <td>10-enero-2000</td>
+                <td>Masculino</td>
+                
+                <td>Central</td>
+                <td><a href="seguimiento01(entrenador).html"> <button>Seguimiento</button></a></td>
+              </tr>
+
+              <tr>
+                <td>99050305720</td>
+                <td>Daniel Andrés</td>
+                <td>Paja Plata</td>
+                <td>03-Mayo-1999</td>
+                <td>Masculino</td>
+                
+                <td>Volante</td>
+                <td><a href="#"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>99061618968</td>
+                <td>Iesua Germán</td>
+                <td>Ramirez Pérez</td>
+                <td>16-Junio-1999</td>
+                <td>Masculino</td>
+                
+                <td>Volante</td>
+                <td><a href="seguimie 3.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+
+              <tr>
+                <td>1192763342</td>
+                <td>Miguel Alfonso</td>
+                <td>López Aristizabal</td>
+                <td>02-Febrero-2001</td>
+                <td>Masculino</td>
+                
+                <td>Delantero</td>
+                <td><a href="seguimie 4.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+
+              <tr>
+                <td>1000784251</td>
+                <td>Nicolás</td>
+                <td>Ardila Pantevis</td>
+                <td>08-Noviembre-2001</td>
+                <td>Masculino</td>
+                
+                <td>Defensa</td>
+                <td><a href="seguimie 5.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>98091412845</td>
+                <td>Nicolás</td>
+                <td>Santos Flores</td>
+                <td>14-Septiembre-1998</td>
+                <td>Masculino</td>
+                
+                <td>Arquero</td>
+                <td><a href="seguimie 6.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>1079097655</td>
+                <td>Kevin Jahir</td>
+                <td>Asprilla Moreno</td>
+                <td>21-Diciembre-1997</td>
+                <td>Masculino</td>
+                
+                <td>Delantero</td>
+                <td><a href="seguimie 7.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>1010127142</td>
+                <td>Andrés Camilo</td>
+                <td>Ruiz Patiño</td>
+                <td>23-Abril-2000</td>
+                <td>Masculino</td>
+                
+                <td>Defensa</td>
+                <td><a href="seguimie 8.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>1024574970</td>
+                <td>Christian Camilo</td>
+                <td>Parrasi Santana</td>
+                <td>06-Octubre-1996</td>
+                <td>Masculino</td>
+                
+                <td>Volante</td>
+                <td><a href="seguimie 9.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>1007722230</td>
+                <td>Jesús David</td>
+                <td>Ospina Comas</td>
+                <td>11-Noviembre-1999</td>
+                <td>Masculino</td>
+                
+                <td>Volante</td>
+                <td><a href="seguimie 10.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>51937095</td>
+                <td>Juan David</td>
+                <td>Vargas Chavez</td>
+                <td>01-Junio-1997</td>
+                <td>Masculino</td>
+                
+                <td>Volante</td>
+                <td><a href="seguimie 11.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>99071411969</td>
+                <td>Sebastián Rubén</td>
+                <td>Galindo Guerrero</td>
+                <td>14-Julio-1999</td>
+                <td>Masculino</td>
+                
+                <td>Volante</td>
+                <td><a href="seguimie 12.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>1010016921</td>
+                <td>Juan Sebastián</td>
+                <td>Castillo Martínez</td>
+                <td>20-Enero-2000</td>
+                <td>Masculino</td>
+                
+                <td>Volante</td>
+                <td><a href="seguimie 13.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>1022</td>
+                <td>Julian</td>
+                <td>Barrera Avila</td>
+                <td>25-Marzo-1997</td>
+                <td>Masculino</td>
+                
+                <td>Defenza</td>
+                <td><a href="seguimie 14.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>1010057923</td>
+                <td>David Sebastián</td>
+                <td>Guerrero Marín</td>
+                <td>08-Diciembre-2000</td>
+                <td>Masculino</td>
+                
+                <td>Delantero</td>
+                <td><a href="seguimie 15.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>98111660490</td>
+                <td>Miguel Angel</td>
+                <td>Ruiz Vanegas</td>
+                <td>16-Noviebmre-1998</td>
+                <td>Masculino</td>
+                
+                <td>Delantero</td>
+                <td><a href="seguimie 16.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>98091252449</td>
+                <td>Juan Diego</td>
+                <td>Uvevar Robles</td>
+                <td>12-Septiembre-1998</td>
+                <td>Masculino</td>
+                
+                <td>Delantero</td>
+                <td><a href="seguimie 17.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>1012426774</td>
+                <td>Luis Felipe</td>
+                <td>Moreno Cañon</td>
+                <td>31-Octubre-1995</td>
+                <td>Masculino</td>
+                
+                <td>Delantero</td>
+                <td><a href="seguimie 18.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>1010145205</td>
+                <td>Juan David</td>
+                <td>Arcila Sepulveda</td>
+                <td>16-Marzo-1999</td>
+                <td>Masculino</td>
+                
+                <td>Delantero</td>
+                <td><a href="seguimie 19.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>97070708926</td>
+                <td>Kevin Daniel</td>
+                <td>Castro Amaya</td>
+                <td>07-Julio-1997</td>
+                <td>Masculino</td>
+                
+                <td>Defensa</td>
+                <td><a href="seguimie 20.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>100052101</td>
+                <td>Kevin Sneider</td>
+                <td>Barbosa García</td>
+                <td>23-Enero-2001</td>
+                <td>Masculino</td>
+                
+                <td>Volante</td>
+                <td><a href="seguimie 21.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>98011560148</td>
+                <td>Juan Felipe </td>
+                <td>Ramos Gomez</td>
+                <td>15-Enero-1998</td>
+                <td>Masculino</td>
+                
+                <td>Defenza</td>
+                <td><a href="seguimie 22.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>99070500864</td>
+                <td>Ronal Jair</td>
+                <td>Chaparro Mendez</td>
+                <td>05-Julio-1999</td>
+                <td>Masculino</td>
+                
+                <td>Volante</td>
+                <td><a href="seguimie 23.html"> <button>Seguimiento</button></a></td>
+              </tr>
+              
+              <tr>
+                <td>99060115725</td>
+                <td>Nicolás Alexander</td>
+                <td>Hernández Machado</td>
+                <td>01-Junio-1999</td>
+                <td>Masculino</td>
+                
+                <td>Volante</td>
+                <td><a href="seguimie 24.html"> <button>Seguimiento</button></a></td>
+              </tr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-table.js"></script>
+  <script src="js/usuario/jquery.easing.1.3.js"></script>
+  <script src="js/usuario/main.js"></script>
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+</body>
+</html>

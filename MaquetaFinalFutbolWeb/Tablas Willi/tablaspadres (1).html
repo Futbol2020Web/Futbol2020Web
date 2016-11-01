@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tablas</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-table.css"></head>
+  <style>
+ .container {
+    background-image: url(img/fondofutbol.png.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 760px;
+  }
+  
+  header{
+    color: #fff;
+  }
+
+  table, table td, table tr {
+  padding:0px;
+  border-spacing: 0px;
+}
+
+table {
+  border:1px black solid;
+  border-radius:5px;
+  min-width:400px;
+  font-family: Helvetica,Arial;
+}
+
+table td {
+  padding:6px;
+}
+
+table tr:first-child td:first-child {
+  border-radius:5px 0px 0px 0px;
+}
+
+table tr:first-child td:last-child {
+  border-radius:0px 5px 0px 0px;
+}
+
+table tr:last-child td:first-child {
+  border-radius:0px 0px 0px 5px;
+}
+
+table tr:last-child td:last-child {
+  border-radius:0px 0px 5px 0px;
+}
+
+table td:not(:last-child) {
+  border-right:1px #666 solid;
+}
+
+
+table tr:nth-child(2n) {
+  background: #87CEEB;
+}
+
+table tr:nth-child(2n+1){
+  background: #ADD8E6;
+}
+
+table.header tr:not(:first-child):hover, table:not(.header) tr:hover {
+  background:#E0FFFF;
+}
+
+table:not(.header) tr {
+  text-align: left;
+}
+
+table.header tr:first-child {
+  font-weight: bold;
+  color:#fff;
+  background-color: #444;
+  border-bottom:1px #000 solid;
+}
+
+table.header tr:nth-child(n+2) {
+  text-align: right;
+}
+
+
+  
+</style>
+
+  <body>
+
+    <div class="container">
+     <div class="row">
+      <div class="col-md-12">
+       <header>
+        <h1 class="page-header text-center">Base de datos acudientes</h1>
+      </header>
+     
+      <table id="table-transform" data-toggle="table" data-row-style="rowStyle" data-pagination="true" data-search="true">
+        <thead>
+
+          <tr>
+            <th>ID</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Fecha Nacimiento</th>
+            <th>Genero</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
+            <th>Correo Electronico</th>
+            <th>Barrio</th>
+
+            
+          </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>79973074</td>
+          <td>Samuel Andres</td>
+          <td>Jimenez</td>
+          <td>26-Julio-1979</td>
+          <td>Masculino</td>
+          <td>3202930492</td>
+          <td>Carrera 99A 71-39 Sur</td>
+          <td>pretico2607hotmail.com</td>
+          <td>Metro Vivienda</td>
+          
+          
+        </tr>
+        <tr>
+          <td>52802123</td>
+          <td>Lesli Paola</td>
+          <td>Plata Rodriguez</td>
+          <td>01-Abril-1981</td>
+          <td>Femenino</td>
+          <td>3214301360</td>
+          <td>Calle 128 B ·89-85</td>
+          <td>plaolaplata31gmail.com</td>
+          <td>Suba Rincón</td>
+          
+        </tr>
+        <tr>
+          <td>60322735</td>
+          <td>javier</td>
+          <td>Lopez Garzon</td>
+          <td>20-septiembre-1977</td>
+          <td>Masculino</td>
+          <td>3193740411</td>
+          <td>No Aplica</td>
+          <td>No Aplica</td>
+          <td>La Esperanza</td>
+          
+        </tr>
+  
+        <tr>
+          <td>1013587718</td>
+          <td>Uzzias</td>
+          <td>Ardila</td>
+          <td>26-Abril-1987</td>
+          <td>Masculino</td>
+          <td>3118324604</td>
+          <td>Carrera 18v ·69B 30 Sur</td>
+          <td>huzziashotmail.com</td>
+          <td>La Ezperanza</td>
+          
+        </tr>
+        <tr>
+          <td>52421209</td>
+          <td>Ingrid Katherine</td>
+          <td>Santos Florez</td>
+          <td>20-Mayo-1977</td>
+          <td>Femenino</td>
+          <td>3043271876</td>
+          <td>Calle 59A SUR ·74-03</td>
+          <td>Ingridsantos74gmail.com</td>
+          <td>La Estancia</td>
+          
+        </tr>
+    
+        <tr>
+          <td>80420307</td>
+          <td>José</td>
+          <td>Ruiz Rodríguez</td>
+          <td>18-Febrero-1972</td>
+          <td>Masculino</td>
+          <td>3112048135</td>
+          <td>Carrera 105-154 A-86</td>
+          <td>No aplica</td>
+          <td>Tuna baja</td>
+          
+        </tr>
+      
+
+        <tr>
+          <td>51937095</td>
+          <td>Mery Luz</td>
+          <td>Chavez Santamaria</td>
+          <td>17-Marzo-1967</td>
+          <td>Femenino</td>
+          <td>3142119851</td>
+          <td>Calle 21-88 A-49</td>
+          <td>mlchavess@hotmail.com</td>
+          <td>Hayuelos</td>
+          
+        </tr>
+      
+        <tr>
+          <td>52421209</td>
+          <td>OScar Rubén</td>
+          <td>Galindo</td>
+          <td>23-Marzo-1979</td>
+          <td>Masculino</td>
+          <td>3105550635</td>
+          <td>Carrera 106-16-86</td>
+          <td>osgal79@hotmail.com</td>
+          <td>Fontibón</td>
+          
+        </tr>
+     
+        <tr>
+          <td>52562004</td>
+          <td>Gloria Isabel</td>
+          <td>Martínez</td>
+          <td>12-Enero-1971</td>
+          <td>Masculino</td>
+          <td>3118573228</td>
+          <td>Carrera 104-13 D-76</td>
+          <td>gloribel-3@hotmail.com</td>
+          <td>Sabana grande</td>
+          
+        </tr>
+        
+  
+        
+        <tr>
+          <td>52421209</td>
+          <td>Miguel Ángel</td>
+          <td>Barrera Andrade</td>
+          <td>07-Enero-1970</td>
+          <td>Masculino</td>
+          <td>3124375060</td>
+          <td>Calle 2A-68D-12</td>
+          <td>miguelbarreraandrade@hotmail.com</td>
+          <td>La igualdad</td>
+          
+        </tr>
+        
+     
+        
+        <tr>
+          <td>80024430</td>
+          <td>Henry</td>
+          <td>Guerrero Rodríguez</td>
+          <td>03-Noviembre-1979</td>
+          <td>Masculino</td>
+          <td>3142631119</td>
+          <td>Calle 70F-83-25</td>
+          <td>gerenciatecnica@contraloriaproyectos.com</td>
+          <td>La clarita</td>
+          
+        </tr>
+        
+        <tr>
+          <td>52421209</td>
+          <td>Fabián Alexander</td>
+          <td>Ruiz Vanegas</td>
+          <td>03-Marzo-1986</td>
+          <td>Masculino</td>
+          <td>3014714058</td>
+          <td>Carrera 57-159-33</td>
+          <td>fabianro.z1986@outlook.com</td>
+          <td>Cantalejo</td>
+          
+        </tr>
+        
+     
+        <tr>
+          <td>23690980</td>
+          <td>Maria</td>
+          <td>Robles</td>
+          <td>22-Abril-1979</td>
+          <td>Femenino</td>
+          <td>3113003365</td>
+          <td>Calle 18A-112A-63</td>
+          <td>No aplica</td>
+          <td>Batavia</td>
+          
+        </tr>
+        
+        
+        <tr>
+          <td>78965432</td>
+          <td>Julia Clemencia</td>
+          <td>Cañon Trujillo</td>
+          <td>09-Diciembre-1969</td>
+          <td>Femenino</td>
+          <td>3124299211</td>
+          <td>No aplica</td>
+          <td>juliclem12@gmail.com</td>
+          <td>No aplica</td>
+          
+        </tr>
+       
+        <tr>
+          <td>79109594</td>
+          <td>José Gildardo</td>
+          <td>Arcila Diaz</td>
+          <td>23-Junio-1962</td>
+          <td>Masculino</td>
+          <td>3202203638</td>
+          <td>Carrera 92-72-20 Sur</td>
+          <td>No aplica</td>
+          <td>Dindalito</td>
+          
+        </tr>
+     
+        <tr>
+          <td>19368489</td>
+          <td>Henry</td>
+          <td>Castro Castro</td>
+          <td>28-Junio-1959</td>
+          <td>Masculino</td>
+          <td>3123679054</td>
+          <td>Calle 24A-24C-57 Sur</td>
+          <td>mecastt@hotmail.com</td>
+          <td>Centenario</td>
+          
+        </tr>
+        
+        <tr>
+          <td>21074409</td>
+          <td>Marleny</td>
+          <td>Hernández</td>
+          <td>18-Noviembre-1956</td>
+          <td>Femenino</td>
+          <td>3115728721</td>
+          <td>Diagonal 16B-104-23</td>
+          <td>No aplica</td>
+          <td>Centenario</td>
+          
+        </tr>
+       
+        <tr>
+          <td>1023938205</td>
+          <td>Jineth Paola</td>
+          <td>Torres</td>
+          <td>05-Agosto-1994</td>
+          <td>Femenino</td>
+          <td>3216514102</td>
+          <td>Calle 43 Sur-10-41 Este</td>
+          <td>No aplica</td>
+          <td>La gloria</td>
+          
+        </tr>
+      
+        <tr>
+          <td>58908632</td>
+          <td>Maria Lilia</td>
+          <td>Ruiz Corzo</td>
+          <td>01-Septiembre-1960</td>
+          <td>Femenino</td>
+          <td>3125466702</td>
+          <td>Diagonal 16B-104-23</td>
+          <td>No aplica</td>
+          <td>Fontibón</td>
+          
+        </tr>
+      
+        <tr>
+          <td>79076354</td>
+          <td>Julián</td>
+          <td>Campos Hernández</td>
+          <td>07-Abril-1977</td>
+          <td>Femenino</td>
+          <td>3165240058</td>
+          <td>Carrera 68B-0-56</td>
+          <td>No aplica</td>
+          <td>La igualdad</td>
+          
+        </tr>
+     
+        <tr>
+         <td>36695969</td>
+         <td>Claudia Marcela</td>
+         <td>Gómez</td>
+         <td>18-Septiembre-1980</td>
+         <td>Femenino</td>
+         <td>3118112599</td>
+         <td>Carrera 87-18-53</td>
+         <td>clamaguis@hotmail.com</td>
+         <td>Hayuelos</td>
+       </tr>
+       
+       <tr>
+         <td>52382267</td>
+         <td>Luz Dary</td>
+         <td>Polanco</td>
+         <td>18-Sept
+          06-Septiembre-1980</td>
+          <td>Femenino</td>
+          <td>3124949397</td>
+          <td>Carrera 7 Este-6-69</td>
+          <td>dary_luz_vargas@hotmial.com</td>
+          <td>Belén</td>
+        </tr>
+        
+        <tr>
+         <td>73025674d></td>
+         <td>Luis Gabriel</td>
+         <td>Ángel</td>
+         <td>22-Septiembre-1958</td>
+         <td>Masculino</td>
+         <td>3105844074</td>
+         <td>Avenida 13-8A-184</td>
+         <td>No aplica</td>
+         <td>La esperanza</td>
+       </tr>
+
+    
+
+       <tr>
+         <td>79325565</td>
+         <td>James Alberto</td>
+         <td>Chaparro</td>
+         <td>22-Enero-1964</td>
+         <td>Masculino</td>
+         <td>3219873233</td>
+         <td>Transversal 12G-35-04 Sur</td>
+         <td>No aplica</td>
+         <td>San Jorge</td>
+       </tr>
+
+    
+
+       <tr>
+         <td>79732685</td>
+         <td>Oscar Alexander</td>
+         <td>Machado</td>
+         <td>05-Septiembre-1980</td>
+         <td>Masculino</td>
+         <td>3138167797</td>
+         <td>Calle 5-04-07</td>
+         <td>machoito-oscar@hotmail.com</td>
+         <td>San josé</td>
+
+       </tr>
+
+     </div>
+
+
+   </div>
+ </div>
+</tbody>
+</table>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+</body>
+</html>

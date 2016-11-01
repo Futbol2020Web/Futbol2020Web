@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tablas</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-table.css">
+</head>
+<style>
+  table, table td, table tr {
+  padding:0px;
+  border-spacing: 0px;
+}
+
+table {
+  border:1px black solid;
+  border-radius:5px;
+  min-width:400px;
+  font-family: Helvetica,Arial;
+}
+
+table td {
+  padding:6px;
+}
+
+table tr:first-child td:first-child {
+  border-radius:5px 0px 0px 0px;
+}
+
+table tr:first-child td:last-child {
+  border-radius:0px 5px 0px 0px;
+}
+
+table tr:last-child td:first-child {
+  border-radius:0px 0px 0px 5px;
+}
+
+table tr:last-child td:last-child {
+  border-radius:0px 0px 5px 0px;
+}
+
+table td:not(:last-child) {
+  border-right:1px #666 solid;
+}
+
+
+table tr:nth-child(2n) {
+  background: #87CEEB;
+}
+
+table tr:nth-child(2n+1){
+  background: #ADD8E6;
+}
+
+table.header tr:not(:first-child):hover, table:not(.header) tr:hover {
+  background:#E0FFFF;
+}
+
+table:not(.header) tr {
+  text-align: left;
+}
+
+table.header tr:first-child {
+  font-weight: bold;
+  color:#fff;
+  background-color: #444;
+  border-bottom:1px #000 solid;
+}
+
+table.header tr:nth-child(n+2) {
+  text-align: right;
+}
+  
+</style>
+
+<body>
+
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <header>
+      <h1 class="page-header text-center">Tabla Jugadores</h1>
+    </header>
+    <h2>Base Datos Jugadores</h2>
+    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+    <table id="table-transform" data-toggle="table" data-row-style="rowStyle" data-pagination="true" data-search="true">
+      <thead>
+
+        <tr>
+          <th>ID</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Fecha Nacimiento</th>
+          <th>Genero</th>
+          <th>Telefono</th>
+          <th>Direccion</th>
+          <th>Correo Electronico</th>
+          <th>Barrio</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+                   <br>
+            <tr>
+              <td>79973074</td>
+              <td>Samuel Andres</td>
+              <td>Jimenez</td>
+              <td>26-Julio-1979</td>
+              <td>Masculino</td>
+              <td>3202930492</td>
+              <td>Carrera 99A 71-39 Sur</td>
+              <td>pretico2607hotmail.com</td>
+              <td>Metro Vivienda</td>
+             
+            </tr>
+            <br>
+
+                   <br>
+            <tr>
+              <td>52802123</td>
+              <td>Lesli Paola</td>
+              <td>Plata Rodriguez</td>
+              <td>01-Abril-1981</td>
+              <td>Femenino</td>
+              <td>3214301360</td>
+              <td>Calle 128 B ·89-85</td>
+              <td>plaolaplata31gmail.com</td>
+              <td>Suba Ricon</td>
+             
+            </tr>
+            <br>
+
+                  <br>
+            <tr>
+              <td>60322735</td>
+              <td>javier</td>
+              <td>Lopez Garzon</td>
+              <td>20-septiembre-1977</td>
+              <td>Masculino</td>
+              <td>3193740411</td>
+              <td>No Aplica</td>
+              <td>No Aplica</td>
+              <td>La Esperenza</td>
+             
+            </tr>
+            <br>
+
+
+                  <br>
+            <tr>
+              <td>1013587718</td>
+              <td>Uzzias</td>
+              <td>Ardila</td>
+              <td>26-Abril-1987</td>
+              <td>Masculino</td>
+              <td>3118324604</td>
+              <td>Carrera 18v ·69B 30 Sur</td>
+              <td>huzziashotmail.com</td>
+              <td>La Ezperanza</td>
+             
+            </tr>
+            <br>
+
+                  <br>
+            <tr>
+              <td>52421209</td>
+              <td>Ingrid Katherine</td>
+              <td>Santos Florez</td>
+              <td>20-Mayo-1977</td>
+              <td>Femenino</td>
+              <td>3043271876</td>
+              <td>Calle 59A SUR ·74-03</td>
+              <td>Ingridsantos74gmail.com</td>
+              <td>La Estancia</td>
+             
+            </tr>
+            <br>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+</body>
+</html>
